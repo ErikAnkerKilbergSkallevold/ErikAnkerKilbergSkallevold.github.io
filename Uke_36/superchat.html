@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<h1>Superchat</h1>
+<article id="txtMeldinger"></article>
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDHsEyqplBe940lbirPJ4E4LfiVqAx-Mi4",
+  authDomain: "erik-sin-nettside.firebaseapp.com",
+  databaseURL: "https://erik-sin-nettside.firebaseio.com",
+  projectId: "erik-sin-nettside",
+  storageBucket: "erik-sin-nettside.appspot.com",
+  messagingSenderId: "253661272364"
+};
+firebase.initializeApp(config);
+</script>
+<script>
+let txtMeldinger = document.getElementByld("txtMeldinger")
+let database = firebase.database(https://erik-sin-nettside.firebaseio.com/ );
+let meldinger = database.ref("meldinger")
+let nyMelding = {
+  "avsender":"Erik Anker",
+  "tekst":"Halla"
+};
+meldinger.push(nyMelding);
+function visMelding(snapshot) {
+  var melding = snapshot.val(https://erik-sin-nettside.firebaseio.com/s);
+  txtMeldinger.innerHTML += `<p>${meldinger.avsender}sier
+  ${melding.tekst}</p>`;
+}
+meldinger.on("child_added", visMelding);
+</script>
+
+  </body>
+</html>
