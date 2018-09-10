@@ -1,0 +1,11 @@
+p{
+font-size: 30px;
+background-color: red;
+padding: 40px;
+}
+h1{
+background-color: green;
+}
+p,h1{
+color: white;
+}
