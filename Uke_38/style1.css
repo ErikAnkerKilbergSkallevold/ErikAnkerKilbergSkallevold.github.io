@@ -1,0 +1,13 @@
+main{
+  display: grid; /* Gjør main om til en grid */
+  grid-template-columns: 3fr 1fr 1fr; /*Vi skal ha w kolonner en på 700px og en på 300px*/
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+    }
+  main>article{
+      background-color: cyan;
+    }
+    main{
+      background-color: red;
+
+    }
