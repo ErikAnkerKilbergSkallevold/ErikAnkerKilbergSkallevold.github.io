@@ -1,0 +1,102 @@
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  background-color: black;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+li{
+  float: left;
+  text-align: center;
+  justify-content: center;
+  background-color: black;
+}
+li a{
+  display: block;
+  padding: 24px;
+  margin: 0px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  transition: 1s;
+}
+.active{
+  background-color: blue;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;
+}
+
+table{
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 24px;
+  padding: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+li a:hover{
+  background-color: darkblue;
+  transition: 1s;
+}
+body{
+  background-color: lightblue;
+  justify-content: center;
+  text-align: center;
+
+}
+main{
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  margin: auto;
+}
+
+
+footer{
+  font-size: 12px;
+  text-align: center;
+}
+
+p{
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+img{
+  width: 400px;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  padding:20px;
+}
+table{
+  border:black solid;
+  border: 20px;
+  margin: auto;
+}
+th{
+  background-color: lightyellow;
+}
+.ledig{
+  background-color: lightgreen;
+}
+video{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+}
+.opptatt{
+  background-color: red;
+}
