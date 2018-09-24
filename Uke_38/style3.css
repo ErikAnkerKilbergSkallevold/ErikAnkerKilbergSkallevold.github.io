@@ -55,9 +55,7 @@ li a{
   background-color: darkblue;
   text-decoration: none;
 }
-pad{
-  margin: 20px;
-}
+
 .active{
   background-color: green;
 }
