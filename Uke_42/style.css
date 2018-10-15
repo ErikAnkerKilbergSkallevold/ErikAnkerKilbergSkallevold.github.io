@@ -1,0 +1,14 @@
+ul{
+  list-style: none;
+}
+body{
+  margin-left: 20%;
+  margin-right: 20%;
+  background-position: center;
+  background-image: url(Bilder/Ørken.jpg);
+  background-size: cover;
+}
+footer>p{
+  font-size: 10px;
+  text-align: center;
+}
