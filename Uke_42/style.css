@@ -1,5 +1,6 @@
-ul{
+ul, ol, h3, p{
   list-style: none;
+
 }
 body{
   margin-left: 20%;
@@ -12,3 +13,9 @@ footer>p{
   font-size: 10px;
   text-align: center;
 }
+img{
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  }
