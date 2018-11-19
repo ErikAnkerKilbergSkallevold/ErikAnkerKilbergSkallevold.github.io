@@ -1,0 +1,61 @@
+.hover:hover{
+  transform: scale(1.05);
+  transition: 1s;
+}
+.hover{
+  transition: 1s;
+}
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  background-color: black;
+}
+li{
+  float: left;
+  text-align: center;
+  justify-content: center;
+  background-color: black;
+}
+.ikkebildenavbar a{
+  display: block;
+  padding: 24px;
+  margin: 0px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  transition: 1s;
+}
+.ikkebildenavbar a:hover{
+  background-color: darkblue;
+  transition: 1s;
+}
+.active{
+  background-color: blue;
+}
+body{
+  background-image: url(Bilder/black-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main{
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+.skobilde{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+main>section>div>img{
+  width: 100%;
+}
