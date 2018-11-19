@@ -42,7 +42,7 @@ li{
   background-color: blue;
 }
 body{
-  background-image: url(Bilder/black-background.jpg);
+  background-image: url(Bilder/Fargerik.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -62,10 +62,10 @@ main>section>div>img{
 .tekst{
   grid-column: span 3;
   grid-row: span 1;
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 10px;
   padding-left: 20px;
-  color: red;
+  color: black;
 }
 .Kjøpnå{
   grid-row: span 1;

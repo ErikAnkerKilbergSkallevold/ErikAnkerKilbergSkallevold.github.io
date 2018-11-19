@@ -48,46 +48,46 @@ body{
 }
 main{
   padding-top: 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
 }
-.skobilde{
-  grid-column: span 2;
-  grid-row: span 2;
-}
+.middelssak{
+    grid-column: span 2;
+    grid-row: span 2
+  }
+.storsak{
+    grid-column: span 4;
+    grid-row: span 3;
+
+  }
+.litensak{
+    grid-column: span 1;
+    grid-row: span 1;
+
+  }
 main>section>div>img{
   width: 100%;
 }
 .tekst{
-  grid-column: span 3;
-  grid-row: span 1;
-  padding-top: 150px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  color: red;
+  background-color: black;
+  color: white;
 }
-.Kjøpnå{
-  grid-row: span 1;
-  grid-column span 1;
-  width: 100%;
-  padding-bottom: 100px;
-  padding-left: 20px;
-}
-.bilde2{
-  width: 200px;
+.logo{
   height: 100px;
+ margin-left: 30px;
 }
-.tekst2{
-  text-align: center;
-  margin: auto;
-  color: red;
-  padding-top: 4px;
-  font-size: 100px;
+a{
+  text-decoration: none;
 }
-main2{
-  grid-template-columns: 1fr 1fr 1fr;
+.logginn{
+  color: white;
 }
-.usynig{
-  grid-column: span 1;
+.logginngrid{
+ display: grid;
+ width: 100%;
+ grid-template-columns: 1fr 1fr 1fr;
+}
+.usynlig{
+  grid-column: span 2;
 }
