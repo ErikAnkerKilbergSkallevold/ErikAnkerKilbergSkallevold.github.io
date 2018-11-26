@@ -90,4 +90,5 @@ a{
 }
 .usynlig{
   grid-column: span 2;
+  grid-column: minmax(1fr, 1fr);
 }

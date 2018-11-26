@@ -14,42 +14,116 @@
       </ul>
     </header>
       <main>
-        <section class="storsak">
-          <div class="bilde">
+
+      <section class="slideshow">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+              <img src="Bilder\blue and blue poster.png" alt="1 farge sko" style="width:100%">
+              <div class="text">RGB one-light</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="Bilder\Red and green poster.png" alt="2 farge sko" style="width:100%">
+              <div class="text">RGB Two-light</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="Bilder\Gamer shoe poster.png" alt="gamer sko" style="width:100%">
+              <div class="text">RGB gamer</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="Bilder\RGB all light poster.png" alt="All light RGB" style="width:100%">
+              <div class="text">RGB all-light</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+      </section>
+
+
+      <section class="litensak">
+        <div class="container">
+            <img src="Bilder\blue and blue poster.png" alt="1 farge sko" class="image">
+          <div class="overlay">
+            <div class="text1"><a href="one_color.html"><p>Light up your day with our all new light up shoes. Our advanced <b>LIGHT-UP©®™</b> technology will light up your way in your desired color!</p></a></div>
           </div>
-        </section>
-        <section class="litensak, hover">
-          <div class="bilde">
-            <img src="Bilder\blue and blue poster.png" alt="">
+        </div>
+      </section>
+
+      <section class="litensak">
+        <div class="container">
+            <img src="Bilder\Red and green poster.png" alt="2 farge sko" class="image">
+          <div class="overlay">
+            <div class="text1"><a href="two_color.html"><p>Show up to two colors at once, one on every shoe. The pleasent lights can be changed to go with your personality. Light up your day!</p></a></div>
           </div>
-          <div class="tekst">
-            <a href="one_color.html"><p>Light up your day with our all new light up shoes. Our advanced <b>LIGHT-UP©®™</b> technology will light up your way in your desired color!</p></a>
+        </div>
+      </section>
+
+      <section class="litensak">
+        <div class="container">
+            <img src="Bilder\Gamer shoe poster.png" alt="gamer sko" class="image">
+          <div class="overlay">
+            <div class="text1"><a href="Gamer_shoe.html"> Get in the game with these RGB GAMING shoes from <b>GIGABYTE©®™ AUROS©®™</b> gaming shoes corporation. Crush your enemies with the greatest tactical advantage!</a></div>
           </div>
-        </section>
-        <section class="litensak, hover">
-          <div class="bilde">
-            <img src="Bilder\Red and green poster.png" alt="">
+        </div>
+      </section>
+
+      <section class="litensak">
+        <div class="container">
+            <img src="Bilder\RGB all light poster.png" alt="All light RGB" class="image">
+          <div class="overlay">
+            <div class="text1"><a href="all_light.html"><p>Show your true colors with our <b>ALL-LIGHT©®™</b> technology. These shoes have it all, RGB shoe laces, fabric and heels! Warranty voided if used</p></a></div>
           </div>
-          <div class="tekst">
-            <a href="two_color.html"><p>Show up to two colors at once, one on every shoe. The pleasent lights can be changed to go with your personality. Light up your day!</p></a>
-          </div>
-        </section>
-        <section class="litensak, hover">
-          <div class="bilde">
-            <a href="Gamer_shoe.html"></a> <img src="Bilder\Gamer shoe poster.png" alt="">
-          </div>
-          <div class="tekst">
-          <a href="Gamer_shoe.html"> Get in the game with these RGB GAMING shoes from <b>GIGABYTE©®™ AUROS©®™</b> gaming shoes corporation. Crush your enemies with the greatest tactical advantage!</a>
-          </div>
-        </section>
-        <section class="litensak, hover">
-          <div class="bilde">
-            <img src="Bilder\RGB all light poster.png" alt="All light RGB">
-          </div>
-          <div class="tekst">
-            <a href="all_light.html"><p>Show your true colors with our <b>ALL-LIGHT©®™</b> technology. These shoes have it all, RGB shoe laces, fabric and heels! Warranty voided if used</p></a>
-          </div>
-        </section>
+        </div>
+      </section>
+
+
+
+          <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+
       </main>
   </body>
 </html>
