@@ -91,3 +91,42 @@ a{
   grid-column: span 2;
   grid-column: minmax(1fr, 1fr);
 }
+.text4{
+  font-size: 16px;
+  text-align: center;
+}
+.text5{
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+.longboye{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: span 4;
+  background-image: url(Bilder/Fargerik.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: span 1;
+}
+footer{
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(68, 201, 101);
+  position: absolute;
+  bottom: 10px;
+  width: 99%;
+}
+.logoboks{
+  margin-top: 10px;
+}
+footer>section{
+  margin-left: auto;
+  margin-right: auto;
+}
+footer>section>.logoboks{
+  margin: auto;
+  padding-top: 50px;
+}

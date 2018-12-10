@@ -51,7 +51,7 @@ main{
   padding-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 25px;
 }
 .middelssak{
     grid-column: span 2;
@@ -235,7 +235,7 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 30px}
 }
-.footer {
+cookie {
    position: fixed;
    left: 0;
    bottom: 0;
@@ -243,4 +243,77 @@ img {vertical-align: middle;}
    background-color: red;
    color: white;
    text-align: center;
+}
+.text3{
+  font-size: 32px;
+  text-align: center;
+  text-decoration: underline;
+}
+.text4{
+  font-size: 16px;
+  text-align: center;
+}
+.text5{
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+.longboye{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: span 4;
+  background-image: url(Bilder/Fargerik.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: span 1;
+}
+footer{
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(68, 201, 101);
+}
+footer>section{
+  margin-left: auto;
+  margin-right: auto;
+}
+footer>section>.logoboks{
+  margin: auto;
+  padding-top: 50px;
+}
+.logoboks{
+  margin-top: 10px;
+}
+.Stortbilde{
+  display: block;
+  grid-column: span 3;
+}
+.usynlig2{
+  grid-column: span 1;
+}
+.usynlig3{
+  grid-row: span 1;
+}
+.Buy{
+  font-size: 24px;
+  text-decoration: none;
+}
+.btn{
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #FFFFFF;
+    background-color: #4CAF50;
+  }
+.button-margin-bottom {
+    margin-bottom: 16px !important;
 }
