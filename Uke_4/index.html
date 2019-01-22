@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SuperChat</title>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCW_TXYXmj2Vz1CJB1qug0Vw3rlqnhM8Gg",
+        authDomain: "superchat-5c458.firebaseapp.com",
+        databaseURL: "https://superchat-5c458.firebaseio.com",
+        projectId: "superchat-5c458",
+        storageBucket: "superchat-5c458.appspot.com",
+        messagingSenderId: "960843607282"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+
+    <h1>SuperChat</h1>
+
+    <article id="txtMeldinger"></article>
+
+    <script type="text/javascript">
+      let database = firebase.database();
+      let meldinger = database.ref("meldinger");
+      let nyMelding ={
+        "avsender":"Erik",
+        "teskt":"Hei"
+      }
+
+      meldinger.push(nyMelding);
+      function visMelding(snapshot){
+        var melding = snapshot.val();
+        txtMeldinger.innerHTML += ` <p>${melding.avsender} sier ${melding.tekst}</p>`;
+      }
+      meldinger.on("child_added", visMelding);
+    </script>
+  </body>
+</html>

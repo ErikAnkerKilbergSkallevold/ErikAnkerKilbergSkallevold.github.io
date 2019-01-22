@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SuperDuperChat</title>
+  </head>
+  <body>
+    <h1>SuperDuperChat</h1>
+
+    <form class="" action="index.html" id="skjema" method="post">
+
+      <input type="text" id="inpAvsender" required placeholder="Hvem er du?" name="" value="">
+      <input type="text" id="inpMening" required placeholder="Hva sier du?" name="" value="">
+      <button type="submit" name="button">OK</button>
+
+    </form>
+
+    <article class="" id="txtMeldinger"></article>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCNXlGdRM3XAm55EEdGe0W237-ZwHST8Y4",
+    authDomain: "superduperchat-f9c9b.firebaseapp.com",
+    databaseURL: "https://superduperchat-f9c9b.firebaseio.com",
+    projectId: "superduperchat-f9c9b",
+    storageBucket: "superduperchat-f9c9b.appspot.com",
+    messagingSenderId: "665815341753"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    <script type="text/javascript">
+
+      let database = firebase.database();
+      let meldinger = database.ref("meldinger");
+      let skjema = document.
+      getElementById("skjema");
+      let inpAvsender = document.
+      getElementById("inpAvsender");
+      let inpMening = document.
+      getElementById("inpMening")
+      let txtMeldinger = document.
+      getElementById("txtMeldinger");
+      function visMelding(snapshot){
+        let melding = snapshot.val();
+        let meldingTekst = `<p>
+          <b>${melding.avsender}:</b>
+          <i>${melding.tekst}</i>
+        </p>`;
+        txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+      }
+      function regNyMelding(evt){
+        evt.preventDefault();
+        var nyMelding = {
+          avsender:inpAvsender.value,
+          tekst:inpMening.value
+        };
+        meldinger.push(nyMelding);
+        inpMening.value = "";
+      }
+      meldinger.on("child_added", visMelding);
+      skjema.onsubmit = regNyMelding;
+
+    </script>
+
+  </body>
+</html>
