@@ -26,6 +26,7 @@
     <button type="button" onclick="sorterType2()" name="button">Sorter etter sekundærtype</button>
     <button type="button" onclick="sorterMaxCP()" name="button">Sorter etter Max CP</button>
     <button type="button" onclick="sorterMaxHP()" name="button">Sorter etter Max HP</button>
+    <button type="button" onclick="revers()" name="button">Endre rekkefølge</button>
 
     <main>
 
@@ -85,6 +86,12 @@
         main.innerHTML = ``
         pokemon
         .orderByChild("MaxHP")
+        .on("child_added", visPoke);
+      }
+      function revers(){
+        pokemon
+        .sort()
+        .reverse()
         .on("child_added", visPoke);
       }
 
