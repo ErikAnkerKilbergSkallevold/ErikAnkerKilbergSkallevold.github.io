@@ -1,0 +1,10 @@
+//function visVare(snapshot){
+//  console.log(snapshot.val());
+//  const data = snapshot.val();
+//  secvarer.innerHTML += `
+//  <hr>
+//  <hr>
+//  <h2>${data.merke}</h2>
+//  <p> <b>Modell:</b> ${data.modell}</p>
+//  <p> <b>Pris:</b> ${data.pris},- <b>kr</b> </p>
+//  `
