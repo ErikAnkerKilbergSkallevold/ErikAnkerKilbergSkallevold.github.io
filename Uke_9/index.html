@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Messenger Clone</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <main>
+        <section id="secMeldinger">
+
+        </section>
+        <section class="skjemaer">
+            <form id="skjema">
+                <input type="text" id="inpMelding" autocomplete="off">
+            </form>
+        </section>
+    </main>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDoOU0xwG1ZqVm0PggXw7_7k6cDH39H1r8",
+    authDomain: "messenger-4d6e2.firebaseapp.com",
+    databaseURL: "https://messenger-4d6e2.firebaseio.com",
+    projectId: "messenger-4d6e2",
+    storageBucket: "messenger-4d6e2.appspot.com",
+    messagingSenderId: "290195473969"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    <script src="./main.js"></script>
+</body>
+</html>
