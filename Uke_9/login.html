@@ -1,28 +1,32 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Messenger clone</title>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in</title>
     <link rel="stylesheet" href="login.css">
+</head>
+<body>
 
-
-  </head>
-  <body>
     <h1>Log in to Messenger Clone</h1>
+    <div id="firebaseui-auth-container"></div>
 
-    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDoOU0xwG1ZqVm0PggXw7_7k6cDH39H1r8",
-      authDomain: "messenger-4d6e2.firebaseapp.com",
-      databaseURL: "https://messenger-4d6e2.firebaseio.com",
-      projectId: "messenger-4d6e2",
-      storageBucket: "",
-      messagingSenderId: "290195473969"
-    };
-    firebase.initializeApp(config);
-    </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDoOU0xwG1ZqVm0PggXw7_7k6cDH39H1r8",
+    authDomain: "messenger-4d6e2.firebaseapp.com",
+    databaseURL: "https://messenger-4d6e2.firebaseio.com",
+    projectId: "messenger-4d6e2",
+    storageBucket: "messenger-4d6e2.appspot.com",
+    messagingSenderId: "290195473969"
+  };
+  firebase.initializeApp(config);
+</script>
 
     <!-- DENNE KODEN KOMMER FRA Firebase.auth -->
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
@@ -30,20 +34,20 @@
     <script type="text/javascript">
     // FirebaseUI config.
     var uiConfig = {
-      signInSuccessUrl: 'index.html',
-      signInOptions: [
+        signInSuccessUrl: 'index.html',
+        signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID
-      ],
-      // tosUrl and privacyPolicyUrl accept either url string or a callback
-      // function.
-      // Terms of service url/callback.
-      tosUrl: '<your-tos-url>',
-      // Privacy policy url/callback.
-      privacyPolicyUrl: function() {
+        ],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback
+        // function.
+        // Terms of service url/callback.
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: function() {
         window.location.assign('<your-privacy-policy-url>');
-      }
+        }
     };
     // Initialize the FirebaseUI Widget using Firebase.
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -51,5 +55,5 @@
     ui.start('#firebaseui-auth-container', uiConfig);
     </script>
 
-  </body>
+</body>
 </html>
