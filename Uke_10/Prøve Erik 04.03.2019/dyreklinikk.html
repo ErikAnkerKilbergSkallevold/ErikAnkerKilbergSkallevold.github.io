@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dyreklinikken</title>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCbNkTa5WnuVKdvcapFbpNyM3xClzFe_X0",
+    authDomain: "prove-uke-10.firebaseapp.com",
+    databaseURL: "https://prove-uke-10.firebaseio.com",
+    projectId: "prove-uke-10",
+    storageBucket: "prove-uke-10.appspot.com",
+    messagingSenderId: "1008964698084"
+  };
+  firebase.initializeApp(config);
+</script>
+<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button class="button" type="button" onclick="visKattNavn()" name="button">Sorter katter etter navn</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visEldstHund()" name="button">Vis 3 eldste hunder</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visBeigeHund()" name="button">Vis alle beige hunder</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visBeigeKatt()" name="button">Vis alle beige katter</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visMogTHund()" name="button">Vis alle hunder mellom M og T</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visMogTKatt()" name="button">Vis alle katter mellom M og T</button> <!-- Gjør ferdig koblingene for alle knappene -->
+      </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script>
+      //Referanser til HTML-elementer
+      const main = document.querySelector("main");
+
+      //Skriv referanser til database under her:
+      const db = firebase.database();
+      const dyr = db.ref("Dyr");
+      let Hunder = db.ref("Dyr/Hunder");
+      let Katter = db.ref("Dyr/Katter");
+      // Javascript-funksjon for å generere HTML-kode for Dyr
+      function genererHTML(snapshot){
+        let Dyr = snapshot.val();
+        main.innerHTML +=`
+            <article class="Dyr">
+            <div class="border">
+              <h1>${Dyr.Navn}</h1>
+              <img src="${Dyr.Bilde}" alt="">
+              <p>Farge: ${Dyr.Farge1}</p>
+              <p>Sekundærfarge: ${Dyr.Farge2}</p>
+              <p>Alder: ${Dyr.Alder}</p>
+            </article>
+        `;
+      }
+
+      // Funksjon som viser alle Dyr
+      function visAlle(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Hunder.on("child_added", genererHTML);
+        Katter.on("child_added", genererHTML);
+      }
+
+      // Lag egne funksjoner som tilfredstiller spørringene 3A, 3B, 3C og 3D her:
+      function visKattNavn(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Katter
+        .orderByChild("Navn")
+        .on("child_added", genererHTML)
+      }
+
+      function visEldstHund(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Hunder
+        .orderByChild("Alder")
+        .limitToLast(3)
+        .on("child_added", genererHTML)
+      }
+
+      function visBeigeHunder(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Hunder
+        .orderByChild("Farge1")
+        .equalTo("Beige")
+        .on("child_added", genererHTML)
+      }
+      function visBeigeKatter(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Katter
+        .orderByChild("Farge1")
+        .equalTo("Beige")
+        .on("child_added", genererHTML)
+      }
+      function visMogTKatt(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Katter
+        .orderByChild("Navn")
+        .startAt("M")
+        .endAt("U")
+        .on("child_added", genererHTML)
+      }
+      function visMogTHund(){
+        main.innerHTML = ""; // sletter innholdet i main.
+        Hunder
+        .orderByChild("Navn")
+        .startAt("M")
+        .endAt("U")
+        .on("child_added", genererHTML)
+      }
+
+
+
+
+
+      visAlle(); // Funksjon som kjøres når siden lastes
+
+    </script>
+
+  </body>
+</html>

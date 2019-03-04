@@ -21,3 +21,15 @@ griddiv{
   text-align: center;
   border-radius: 1px
 }
+.button{
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px;
+  cursor: pointer;
+}
