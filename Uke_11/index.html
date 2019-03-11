@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Megalinks Backup</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBR1c9kwMVnn-7n6ZU5pxCU01rftgWj4bc",
+        authDomain: "megalinksdb.firebaseapp.com",
+        databaseURL: "https://megalinksdb.firebaseio.com",
+        projectId: "megalinksdb",
+        storageBucket: "megalinksdb.appspot.com",
+        messagingSenderId: "1053153392977"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <button class="button" type="button" onclick="gjemNSFW()" name="button">Hide NSFW</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visNSFW()" name="button">Show NSFW</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visBeigeHund()" name="button">Vis alle beige hunder</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visBeigeKatt()" name="button">Vis alle beige katter</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visMogTHund()" name="button">Vis alle hunder mellom M og T</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button class="button" type="button" onclick="visMogTKatt()" name="button">Vis alle katter mellom M og T</button> <!-- Gjør ferdig koblingene for alle knappene -->
+      </nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script type="text/javascript">
+
+      //Referanser til HTML-elementer
+      const main = document.querySelector("main");
+
+      //Skriv referanser til database under her:
+      const db = firebase.database();
+      const Poster = db.ref("submissions");
+      const Poster_edit = db.ref("submissions_edits");
+      const Kommentarer = db.ref("comments");
+      const Kommentarer_edit = db.ref("comments_edits");
+      // Javascript-funksjon for å generere HTML-kode
+      function genererHTML(snapshot){
+        console.log("Kaptein Sabeltann er en farlig mann");
+        let Post = snapshot.val();
+        main.innerHTML +=`
+            <article class="Poster">
+            <div class="border">
+              <h1>${Post.title}</h1>
+              <b>Created (Unix): ${Post.created}</b>
+            <div class="grid_inne">
+              <b>Votes: ${Post.score}</b>
+              <b>Username: ${Post.author}</b>
+              <b>NSFW: ${Post.nsfw}</b>
+              <b>Flair: ${Post.flair_text}</b>
+            </div>
+            <div class="divtekst">
+              <p class="tekst">${Post.selftext}</p>
+            </div>
+              <br>
+              <p>Comments: ${Post.num_comments}</p>
+              <p class="comments">${Post.body}</p>
+
+            </article>
+        `;
+      }
+
+      function visAlle(){
+        main.innerHTML = ""; // sletter innholdet i main
+        Poster
+          .limitToFirst(20)
+          .on("child_added", genererHTML);
+      }
+
+      function gjemNSFW(){
+        main.innerHTML = ""; // sletter innholdet i main
+        Poster
+          .orderByChild("nsfw")
+          .equalTo(0)
+          .limitToFirst(10)
+          .on("child_added", genererHTML);
+      }
+      function visNSFW(){
+        main.innerHTML = ""; // sletter innholdet i main
+        Poster
+          .orderByChild("nsfw")
+          .equalTo(1)
+          .limitToFirst(10)
+          .on("child_added", genererHTML);
+      }
+      visAlle();
+
+    </script>
+  </body>
+</html>
