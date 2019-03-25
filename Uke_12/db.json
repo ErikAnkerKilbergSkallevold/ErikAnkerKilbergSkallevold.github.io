@@ -1,0 +1,219 @@
+{
+  "Datadeler" : {
+    "CPU" : {
+      "CPU1" : {
+        "Hastighet": 4,
+        "Kjerner" : 4,
+        "Trader" : 8,
+        "Bilde" : "bilder/Intel Core i7-6700K.jpg",
+        "Pris" : 4500,
+        "Merke" : "Intel",
+        "Navn" : "Intel Core i7 6700k"
+      },
+      "CPU2" : {
+        "Hastighet": 3.6,
+        "Kjerner" : 4,
+        "Trader" : 4,
+        "Bilde" : "bilder/Intel Core i3-8100.jpg",
+        "Pris" : 1390,
+        "Merke" : "Intel",
+        "Navn" : "Intel Core i3 8100"
+      },
+      "CPU3" : {
+        "Hastighet": 3.5,
+        "Kjerner" : 4,
+        "Trader" : 4,
+        "Bilde" : "bilder/Intel Core i5-6600K.jpg",
+        "Pris" : 3000,
+        "Merke" : "Intel",
+        "Navn" : "Intel Core i5 6600k"
+      },
+      "CPU4" : {
+        "Hastighet": 4.5,
+        "Kjerner" : 8,
+        "Trader" : 16,
+        "Bilde" : "bilder/AMD FX-8350 Black Edition.jpg",
+        "Pris" : 4000,
+        "Merke" : "AMD",
+        "Navn" : "AMD FX-8350 Black Edition"
+      },
+      "CPU5" : {
+        "Hastighet": 5,
+        "Kjerner" : 16,
+        "Trader" : 8,
+        "Bilde" : "bilder/Intel Core i9-9900K.jpg",
+        "Pris" : 5500,
+        "Merke" : "Intel",
+        "Navn" : "Intel Core i9 9900k"
+      },
+      "CPU6" : {
+        "Hastighet": 4.35,
+        "Kjerner" : 8,
+        "Trader" : 16,
+        "Bilde" : "bilder/AMD Ryzen 7 2700X.jpg",
+        "Pris" : 3499,
+        "Merke" : "AMD",
+        "Navn" : "AMD Ryzen 7 2700X"
+      },
+      "CPU7" : {
+        "Hastighet": 4.2,
+        "Kjerner" : 6,
+        "Trader" : 12,
+        "Bilde" : "bilder/AMD Ryzen 5 2600X.jpg",
+        "Pris" : 2500,
+        "Merke" : "AMD",
+        "Navn" : "Ryzen 5 2600X"
+      },
+      "CPU8" : {
+        "Hastighet": 3.8,
+        "Kjerner" : 28,
+        "Trader" : 56,
+        "Bilde" : "bilder/Intel Xeon Platinum 8180.jpg",
+        "Pris" : 111999,
+        "Merke" : "Intel",
+        "Navn" : "Intel Xeon Platinum 8180"
+      },
+      "CPU9" : {
+        "Hastighet": 3.8,
+        "Kjerner" : 8,
+        "Trader" : 16,
+        "Bilde" : "bilder/AMD Ryzen Threadripper 1900X.jpg",
+        "Pris" : 3511,
+        "Merke" : "AMD",
+        "Navn" : "AMD Ryzen Threadripper 1900X"
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "GPU" : {
+      "GPU1" : {
+        "Hastighet" : 1710,
+        "Minne" : 8,
+        "Type" : "GDDR6",
+        "Bilde" : "bilder/rtx 2080.jpg",
+        "Pris" : 9949,
+        "Merke" : "nVidia",
+        "Navn" : "GeForce RTX 2080"
+      },
+      "GPU2" : {
+        "Hastighet" : 1665,
+        "Minne" : 11,
+        "Type" : "GDDR6",
+        "Bilde" : "bilder/rtx 2080ti.jpg",
+        "Pris" : 14689,
+        "Merke" : "nVidia",
+        "Navn" : "GeForce RTX 2080ti"
+      },
+      "GPU3" : {
+        "Hastighet" : 1815,
+        "Minne" : 8,
+        "Type" : "GDDR6",
+        "Bilde" : "bilder/GeForce RTX 2070.jpg",
+        "Pris" : 7490,
+        "Merke" : "nVidia",
+        "Navn" : "GeForce RTX 2070"
+      },
+      "GPU4" : {
+        "Hastighet" : 1573,
+        "Minne" : 8,
+        "Type" : "HBM2",
+        "Bilde" : "bilder/Radeon RX Vega 56.jpg",
+        "Pris" : 3649,
+        "Merke" : "AMD",
+        "Navn" : "Radeon RX Vega 56"
+      },
+      "GPU5" : {
+        "Hastighet" : 1590,
+        "Minne" : 8,
+        "Type" : "HBM2",
+        "Bilde" : "bilder/Radeon RX Vega 64.jpg",
+        "Pris" : 4899,
+        "Merke" : "AMD",
+        "Navn" : "Radeon RX Vega 64"
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "SSD" : {
+      "SSD1" : {
+        "Grensesnitt" : "M.2 (PCIe Gen 3.0 x 4, NVMe)",
+        "Read/Write" : "3500/3200",
+        "GB" : 1000,
+        "Fysisk Stor" : 2.5,
+        "Layers" : "MLC",
+        "TBW" : "600",
+        "Navn" : "Samsung 970 EVO Plus",
+        "Merke" : "Samsung",
+        "Pris" : 2849
+      },
+      "SSD2" : {
+        "Grensesnitt" : "M.2 (PCIe Gen 3.0 x 4, NVMe)",
+        "Read/Write" : "3500/3200",
+        "GB" : 500,
+        "Fysisk Stor" : 2.5,
+        "Layers" : "MLC",
+        "TBW" : "300",
+        "Navn" : "Samsung 970 EVO Plus",
+        "Merke" : "Samsung",
+        "Pris" : 1439
+      },
+      "SSD3" : {
+        "Grensesnitt" : "M.2 (PCIe Gen 3.0 x 4, NVMe)",
+        "Read/Write" : "3500/3200",
+        "GB" : 250,
+        "Fysisk Stor" : 2.5,
+        "Layers" : "MLC",
+        "TBW" : "150",
+        "Navn" : "Samsung 970 EVO Plus",
+        "Merke" : "Samsung",
+        "Pris" : 1049
+      },
+      "SSD4" : {
+        "Grensesnitt" : "M.2 (PCI-e)",
+        "Read/Write" : "3500/3300",
+        "GB" : 1000,
+        "Fysisk Stor" : 2.5,
+        "Layers" : "MLC",
+        "TBW" : "600",
+        "Navn" : "Samsung 970 EVO Plus",
+        "Merke" : "Samsung",
+        "Pris" : 2849
+      }
+
+
+
+    }
+  }
+}

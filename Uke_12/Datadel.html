@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dataspess</title>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA_zXyJ6kEYgdf45eOz3qNZkGUFcbz0JJs",
+        authDomain: "portefolje-5a496.firebaseapp.com",
+        databaseURL: "https://portefolje-5a496.firebaseio.com",
+        projectId: "portefolje-5a496",
+        storageBucket: "portefolje-5a496.appspot.com",
+        messagingSenderId: "921169348074"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+
+    <main>
+
+    </main>
+
+    <script type="text/javascript">
+      //refereanser til HTML elementer
+      const main = document.querySelector("main");
+
+      //koden som henter key fra forrige side
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      let id = url.searchParams.get("id");
+
+      console.log(id);
+
+      const db = firebase.database();
+      const Datadeler = db.ref("Datadeler");
+      const valgtDatadel = db.ref("Datadeler/" + id);
+
+
+      function visDatadel(snap){
+        let key = snap.key;
+        let objekt = snap.val();
+        console.log(objekt);
+
+        main.innerHTML += `
+        <article>
+          <h1>Navn:${objekt.Navn}</h1>
+        </article>
+        `;
+
+      }
+
+      function visDatadel2(snap){
+        console.log(snap.val());
+      }
+
+      valgtDatadel.on("value",visDatadel);
+    </script>
+
+  </body>
+</html>

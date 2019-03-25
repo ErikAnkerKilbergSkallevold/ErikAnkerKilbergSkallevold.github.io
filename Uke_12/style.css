@@ -1,0 +1,118 @@
+.sidenav {
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color: white;
+ overflow-x: hidden;
+ padding-top: 60px;
+ transition: 0.5s;
+}
+
+
+.sidenav a {
+ padding: 15px 8px 15px 8px;
+ text-decoration: none;
+ font-size: 25px;
+ color: black;
+ display: block;
+ font-family: sans-serif;
+ transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+ color: white;
+}
+
+
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 50px;
+ padding-bottom: 2px;
+}
+
+
+#main {
+ transition: margin-left .5s;
+ padding: 20px;
+}
+
+
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
+}
+.button{
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 0px;
+  border: 2px solid white;
+  transition: 0.1s;
+  padding-top: 200px;
+
+}
+.button:hover{
+  color: white;
+  background-color: #e52437;
+  border: 2px solid red;
+  transition: 0.1s;
+}
+.button.active{
+  background-color: #e52437;
+  color: white;
+  border: 2px solid red;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
+}
+.border {
+  background-color: white;
+  border: 2px solid lightgrey;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px;
+  transition: 0.5s;
+}
+img{
+  max-width: 300px;
+}
+.border:hover {
+  background-color: white;
+  transition: 0.5s;
+  border: 2px solid red;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.banner{
+  width: 100%;
+  text-align: center;
+}
+.sorterbutton{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}

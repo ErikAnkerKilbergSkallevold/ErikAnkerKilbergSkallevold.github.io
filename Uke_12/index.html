@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dataspess</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA_zXyJ6kEYgdf45eOz3qNZkGUFcbz0JJs",
+        authDomain: "portefolje-5a496.firebaseapp.com",
+        databaseURL: "https://portefolje-5a496.firebaseio.com",
+        projectId: "portefolje-5a496",
+        storageBucket: "portefolje-5a496.appspot.com",
+        messagingSenderId: "921169348074"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <header>
+    <nav>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="button active" href="index.html">Hjem</a>
+        <a class="button" href="#">Datadeler</a>
+        <a class="button" href="#">Salg</a>
+        <a class="button" href="#">Om oss</a>
+      </div>
+    </nav>
+  </header>
+  <body id="body">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="banner">
+      <img class="" src="bilder\Komplett banner.png" alt="Dataspess banner">
+    </div>
+
+    <div class="sorterbutton">
+      <button class="button1" type="button" onclick="visCPU()" name="button"> <img src="bilder\chip.png" alt="CPU"> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visGPU()" name="button"> <img src="bilder\grafikkort.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visPSU()" name="button"> <img src="bilder\minne.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visHDD()" name="button"> <img src="bilder\harddisk.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visSSD()" name="button"> <img src="bilder\harddisk_ssd.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visMOBO()" name="button"> <img src="bilder\moderkort.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visCase()" name="button"> <img src="bilder\dator_chassi.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visPSU()" name="button"> <img src="bilder\natagg.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+      <button class="button1" type="button" onclick="visKjoler()" name="button"> <img src="bilder\kylning.png" alt=""> </button> <!-- Gjør ferdig koblingene for alle knappene -->
+    </div>
+
+    <main id="main">
+
+    </main>
+
+
+    <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("body").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "white";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("body").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+
+
+    const main = document.querySelector("main");
+
+    //Skriv referanser til database under her:
+    const db = firebase.database();
+    const Datadeler =db.ref("Datadeler");
+    const CPU = db.ref("Datadeler/CPU");
+    const GPU = db.ref("Datadeler/GPU");
+    // Javascript-funksjon for å generere HTML-kode for Dyr
+    function genererHTML(snapshot){
+      const Data = snapshot.val();
+      const key = snapshot.key;
+      let parent = snapshot.ref.parent.key;
+      let urlId = parent + "/" + key;
+      main.innerHTML +=`
+          <article class="Datadeler">
+          <a href="Datadel.html?id=${urlId}">
+             <div class="border">
+                <h1>${Data.Navn}</h1>
+                <img src="${Data.Bilde}" alt="">
+                <p>Pris: ${Data.Pris}</p>
+            </div>
+          </a>
+
+
+          </article>
+      `;
+    }
+
+    // Funksjon som viser alle Dyr
+    function visAlle(){
+      main.innerHTML = ""; // sletter innholdet i main.
+      GPU.on("child_added", genererHTML);
+      CPU.on("child_added", genererHTML);
+    }
+    function visCPU(){
+      main.innerHTML = ""; // sletter innholdet i main
+      CPU
+        .orderByChild("Pris")
+        .on("child_added", genererHTML);
+    }
+    function visGPU(){
+      main.innerHTML = ""; // sletter innholdet i main
+      GPU
+        .orderByChild("Pris")
+        .on("child_added", genererHTML);
+    }
+
+    visAlle(); // Funksjon som kjøres når siden lastes
+    </script>
+
+  </body>
+</html>

@@ -64,7 +64,7 @@
               <b>Flair: ${Post.flair_text}</b>
             </div>
             <div class="divtekst">
-              <p class="tekst">${Post.selftext}</p>
+              <p class="tekst"></p>
             </div>
               <br>
               <p>Comments: ${Post.num_comments}</p>
@@ -97,8 +97,38 @@
           .limitToFirst(10)
           .on("child_added", genererHTML);
       }
+
+      function search() {
+        console.log("trigger");
+        // Declare variables
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("searchbox");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("alllinks");
+        tr = table.getElementsByTagName("p");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("a")[0];
+          if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+
+        if (filter.length == 0) {
+          for (var i = 0; i < tr.length; i++) {
+            tr[i].style.display = 'none';
+          }
+        }
+      }
+
       visAlle();
 
     </script>
+
   </body>
 </html>
