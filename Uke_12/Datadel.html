@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Dataspess</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -17,13 +18,45 @@
       firebase.initializeApp(config);
     </script>
   </head>
-  <body>
+  <header>
+    <nav>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="button active" href="index.html">Hjem</a>
+        <a class="button" href="#">Datadeler</a>
+        <a class="button" href="#">Salg</a>
+        <a class="button" href="#">Om oss</a>
+      </div>
+    </nav>
+  </header>
+  <body id="body">
+      <span class="sticky" style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="bilder\Hamburgermeny.png" id="Hamburger" alt="Hamburgermeny"></span>
+    <div class="bannerdatadel">
+    <a href="index.html"><img class="" src="bilder\Komplett banner.png" alt="Dataspess banner"></a>
+    </div>
 
     <main>
 
     </main>
 
     <script type="text/javascript">
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("body").style.marginLeft = "250px";
+      document.getElementById("Hamburger").style.display = "none";
+      document.body.style.backgroundColor = "white";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("body").style.marginLeft = "0";
+      document.getElementById("Hamburger").style.display = "";
+      document.body.style.backgroundColor = "white";
+    }
+
+
       //refereanser til HTML elementer
       const main = document.querySelector("main");
 
@@ -45,8 +78,12 @@
         console.log(objekt);
 
         main.innerHTML += `
-        <article>
-          <h1>Navn:${objekt.Navn}</h1>
+        <article class="valgtDatadel">
+          <h1>${objekt.Navn}</h1>
+          <h3>${objekt.Merke}</h3>
+          <img src="${objekt.Bilde}" alt="Bilde av produkt"/>
+          <b>Kr,- ${objekt.Pris}</b>
+          <p>Grensesnitt: </p>
         </article>
         `;
 
