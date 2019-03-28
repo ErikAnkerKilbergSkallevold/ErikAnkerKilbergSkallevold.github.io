@@ -35,9 +35,9 @@
     <a href="index.html"><img class="" src="bilder\Komplett banner.png" alt="Dataspess banner"></a>
     </div>
 
-    <main>
+    <man>
 
-    </main>
+    </man>
 
     <script type="text/javascript">
 
@@ -60,7 +60,7 @@
 
 
       //refereanser til HTML elementer
-      const main = document.querySelector("main");
+      const man = document.querySelector("man");
 
       //koden som henter key fra forrige side
       let url_string = window.location.href;
@@ -88,22 +88,85 @@
           <h1>${objekt.Navn}</h1>
           <h3>${objekt.Merke}</h3>
           <img src="${objekt.Bilde}" alt="Bilde av produkt"/>
+          <br>
           <b>Kr,- ${objekt.Pris}</b>
           </div>
           `
 
 
 
-        if(objekt.Grensesnitt){
+
+        if(objekt.GB){
           nyArtikkel.innerHTML += `
-              <p>Grensesnitt: ${objekt.Grensesnitt}</p>
+          <div class="gridmidler">
+              <p>Mengde GB: ${objekt.GB} GB</p>
+          </div>
           `;
         }
+
+        if(objekt.ReadWrite){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Read/Write: ${objekt.ReadWrite} Mbps</p>
+          </div>
+          `;
+        }
+
+        if(objekt.RPM){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Spinnehastighet: ${objekt.RPM} RPM</p>
+          </div>
+          `;
+        }
+
+        if(objekt.Cache){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Cache: ${objekt.Cache} MB</p>
+          </div>
+          `;
+        }
+
+        if(objekt.Layers){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>SSD teknologi: ${objekt.Layers}</p>
+          </div>
+          `;
+        }
+
+        if(objekt.TBW){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>SSD-Utholdenhet ${objekt.TBW} TBW </p>
+          </div>
+          `;
+        }
+
+        if(objekt.FysiskStor){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Kompitabel brønn: ${objekt.FysiskStor}</p>
+          </div>
+          `;
+        }
+
+
 
         if(objekt.Hastighet){
           nyArtikkel.innerHTML += `
           <div class="gridmidler">
-            <p> ${objekt.Hastighet}GHz </p>
+            <p> Klokkehastighet: ${objekt.Hastighet}GHz </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.HastighetMHz){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Klokkehastighet: ${objekt.HastighetMHz}MHz </p>
           </div>
 
           `;
@@ -111,29 +174,37 @@
 
         if(objekt.Kjerner){
           nyArtikkel.innerHTML += `
+          <div class="gridmidler">
               <p> ${objekt.Kjerner} Kjerner</p>
+          </div>
           `;
         }
 
         if(objekt.Trader){
           nyArtikkel.innerHTML += `
+          <div class="gridmidler">
               <p>${objekt.Trader} Tråder</p>
+          </div>
           `;
         }
 
         if(objekt.Minne){
           nyArtikkel.innerHTML += `
-              <p> ${objekt.Minne} GB</p>
+          <div class="gridmidler">
+              <p> Mengde VRAM: ${objekt.Minne} GB</p>
+          </div>
           `;
         }
 
         if(objekt.Type){
           nyArtikkel.innerHTML += `
-              <p> ${objekt.Type}</p>
+          <div class="gridmidler">
+              <p> Minnetype: ${objekt.Type}</p>
+          </div>
           `;
         }
 
-        main.append(nyArtikkel);
+        man.append(nyArtikkel);
 
       }
 

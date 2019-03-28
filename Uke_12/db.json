@@ -91,7 +91,7 @@
 
         "GPU" : {
           "GPU1" : {
-            "HastighetGPU" : 1710,
+            "HastighetMHz" : 1710,
             "Minne" : 8,
             "Type" : "GDDR6",
             "Bilde" : "bilder/rtx 2080.jpg",
@@ -100,7 +100,7 @@
             "Navn" : "GeForce RTX 2080"
           },
           "GPU2" : {
-            "HastighetGPU" : 1665,
+            "HastighetMHz" : 1665,
             "Minne" : 11,
             "Type" : "GDDR6",
             "Bilde" : "bilder/rtx 2080ti.jpg",
@@ -109,7 +109,7 @@
             "Navn" : "GeForce RTX 2080ti"
           },
           "GPU3" : {
-            "HastighetGPU" : 1815,
+            "HastighetMHz" : 1815,
             "Minne" : 8,
             "Type" : "GDDR6",
             "Bilde" : "bilder/GeForce RTX 2070.jpg",
@@ -118,7 +118,7 @@
             "Navn" : "GeForce RTX 2070"
           },
           "GPU4" : {
-            "HastighetGPU" : 1573,
+            "HastighetMHz" : 1573,
             "Minne" : 8,
             "Type" : "HBM2",
             "Bilde" : "bilder/Radeon RX Vega 56.jpg",
@@ -127,7 +127,7 @@
             "Navn" : "Radeon RX Vega 56"
           },
           "GPU5" : {
-            "HastighetGPU" : 1590,
+            "HastighetMHz" : 1590,
             "Minne" : 8,
             "Type" : "HBM2",
             "Bilde" : "bilder/Radeon RX Vega 64.jpg",
@@ -141,7 +141,7 @@
             "Grensesnitt" : "M.2 (PCIe Gen 3.0 x 4, NVMe)",
             "ReadWrite" : "3500/3200",
             "GB" : 1000,
-            "Fysisk Stor" : 2.5,
+            "FysiskStor" : 2.5,
             "Layers" : "MLC V-NAND",
             "TBW" : "600",
             "Navn" : "Samsung 970 EVO Plus 1TB",
@@ -153,7 +153,7 @@
             "Grensesnitt" : "M.2 (PCIe Gen 3.0 x 4, NVMe)",
             "ReadWrite" : "3500/3200",
             "GB" : 500,
-            "Fysisk Stor" : 2.5,
+            "FysiskStor" : 2.5,
             "Layers" : "MLC V-NAND",
             "TBW" : "300",
             "Navn" : "Samsung 970 EVO Plus 500GB",
@@ -165,7 +165,7 @@
             "Grensesnitt" : "mSATA (SATA 3.0)",
             "ReadWrite" : "550/520",
             "GB" : 500,
-            "Fysisk Stor" : "PCI-e 1x",
+            "FysiskStor" : "PCI-e 1x",
             "Layers" : "MLC V-NAND",
             "TBW" : "150",
             "Navn" : "Samsung 860 EVO 500GB",
@@ -177,7 +177,7 @@
             "Grensesnitt" : "M.2 (PCI-e)",
             "ReadWrite" : "3500/3300",
             "GB" : 250,
-            "Fysisk Stor" : 2.5,
+            "FysiskStor" : 2.5,
             "Layers" : "MLC V-NAND",
             "TBW" : "200",
             "Navn" : "Samsung 970 EVO Plus 250GB",
@@ -189,7 +189,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "560/530",
             "GB" : 500,
-            "Fysisk Stor" : 2.5,
+            "FysiskStor" : 2.5,
             "Layers" : "MLC 3D-NAND",
             "TBW" : "200",
             "Navn" : "WD Blue 3D 500GB",
@@ -201,7 +201,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "560/530",
             "GB" : 1000,
-            "Fysisk Stor" : 2.5,
+            "FysiskStor" : 2.5,
             "Layers" : "MLC 3D-NAND",
             "TBW" : "400",
             "Navn" : "WD Blue 3D 1TB",
@@ -213,7 +213,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "560/530",
             "GB" : 250,
-            "Fysisk Stor" : 2.5,
+            "FysiskStor" : 2.5,
             "Layers" : "MLC 3D-NAND",
             "TBW" : "100",
             "Navn" : "WD Blue 3D 250GB",
@@ -234,7 +234,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "150/150",
             "GB" : 1000,
-            "Fysisk Stor" : 3.5,
+            "FysiskStor" : 3.5,
             "Cache" : "64",
             "RPM" : "5400",
             "Navn" : "WD Desktop Blue 1TB",
@@ -246,7 +246,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "150/150",
             "GB" : 4000,
-            "Fysisk Stor" : 3.5,
+            "FysiskStor" : 3.5,
             "Cache" : "64",
             "RPM" : "5400",
             "Navn" : "WD Desktop Blue 4TB",
@@ -258,7 +258,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "220/220",
             "GB" : 6000,
-            "Fysisk Stor" : 3.5,
+            "FysiskStor" : 3.5,
             "Cache" : "128",
             "RPM" : "7200",
             "Navn" : "WD Desktop Black 6TB",
@@ -270,7 +270,7 @@
             "Grensesnitt" : "SATA 6.0Gbps",
             "ReadWrite" : "220/220",
             "GB" : 4000,
-            "Fysisk Stor" : 3.5,
+            "FysiskStor" : 3.5,
             "Cache" : "64",
             "RPM" : "7200",
             "Navn" : "WD Desktop Black 4TB",
@@ -336,7 +336,7 @@
             "Merke" : "G.Skill",
             "Mengde" : 16,
             "Antall" : "2x8",
-            "Hastighet" : 3200,
+            "HastighetMHz" : 3200,
             "Timing" : "CL16 (16-18-18-38)",
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
@@ -348,7 +348,7 @@
             "Merke" : "G.Skill",
             "Mengde" : 16,
             "Antall" : "2x8",
-            "Hastighet" : 3200,
+            "HastighetMHz" : 3200,
             "Timing" : "CL14 (14-14-14-34)",
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
@@ -360,7 +360,7 @@
             "Merke" : "Corsair",
             "Mengde" : 32,
             "Antall" : "4x8",
-            "Hastighet" : 3200,
+            "HastighetMHz" : 3200,
             "Timing" : "CL14 (14-16-16-36)",
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
@@ -372,7 +372,7 @@
             "Merke" : "Corsair",
             "Mengde" : 128,
             "Antall" : "8x16",
-            "Hastighet" : 3600,
+            "HastighetMHz" : 3600,
             "Timing" : "CL18 (18-19-19-39)",
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
@@ -384,7 +384,7 @@
             "Merke" : "Corsair",
             "Mengde" : 64,
             "Antall" : "8x8",
-            "Hastighet" : 4000,
+            "HastighetMHz" : 4000,
             "Timing" : "CL19 (19-23-23-45)",
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
@@ -396,7 +396,7 @@
             "Merke" : "Corsair",
             "Mengde" : 8,
             "Antall" : "1x8",
-            "Hastighet" : 2133,
+            "HastighetMHz" : 2133,
             "Timing" : "CL15 (15-15-15-36)",
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
@@ -410,49 +410,49 @@
             "Merke" : "Noctua",
             "Pris" : 949,
             "Bilde" : "bilder/Noctua NH-D15.jpg",
-            "Type" : "Luft"
+            "KjølerType" : "Luft"
           },
           "Kjoler2" : {
             "Navn" : "Cooler Master Hyper 212 Evo",
             "Merke" : "Cooler Master",
             "Pris" : 299,
             "Bilde" : "bilder/Cooler Master Hyper 212 Evo.jpg",
-            "Type" : "Luft"
+            "KjølerType" : "Luft"
           },
           "Kjoler3" : {
             "Navn" : "Cryorig C1",
             "Merke" : "Cryorig",
             "Pris" : 749,
             "Bilde" : "bilder/Cryorig C1.jpg",
-            "Type" : "Luft"
+            "KjølerType" : "Luft"
           },
           "Kjoler4" : {
             "Navn" : "Be Quiet! Dark Rock PRO 3",
             "Merke" : "Be Quiet!",
             "Pris" : 899,
             "Bilde" : "bilder/Be Quiet! Dark Rock PRO 3.jpg",
-            "Type" : "Luft"
+            "KjølerType" : "Luft"
           },
           "Kjoler5" : {
             "Navn" : "ASUS ROG RYUO 240",
             "Merke" : "ASUS",
             "Pris" : 1790,
             "Bilde" : "bilder/ASUS ROG RYUO 240.jpg",
-            "Type" : "Vann"
+            "KjølerType" : "Vann"
           },
           "Kjoler6" : {
             "Navn" : "ASUS ROG RYUJIN 360",
             "Merke" : "ASUS",
             "Pris" : 2590,
             "Bilde" : "bilder/ASUS ROG RYUJIN 360.jpg",
-            "Type" : "Vann"
+            "KjølerType" : "Vann"
           },
           "Kjoler7" : {
             "Navn" : "Corsair Hydro H115i RGB Platinum",
             "Merke" : "Corsair",
             "Pris" : 1799,
             "Bilde" : "bilder/Corsair Hydro H115i RGB Platinum.jpg",
-            "Type" : "Vann"
+            "KjølerType" : "Vann"
         }
       },
       "Case" : {
@@ -460,43 +460,43 @@
           "Navn" : "Corsair Obsidian 1000D Super Tower Case",
           "Pris" : 5490,
           "Bilde" : "bilder/Corsair Obsidian 1000D Super Tower Case.jpg",
-          "Type" : "E-ATX, ATX, mATX, mITX"
+          "TypeATX" : "E-ATX, ATX, mATX, mITX"
         },
         "Case2" : {
           "Navn" : "Phanteks Enthoo Elite Extreme Case",
           "Pris" : 8999,
           "Bilde" : "bilder/Phanteks Enthoo Elite Extreme Case.jpg",
-          "Type" : "ATX, EATX, uATX, mITX, SSI EEB"
+          "TypeATX" : "ATX, EATX, uATX, mITX, SSI EEB"
         },
         "Case3" : {
           "Navn" : "Cooler Master Cosmos C700P",
           "Pris" : 3503,
           "Bilde" : "bilder/Cooler Master Cosmos C700P.jpg",
-          "Type" : "m-ITX,m-ATX,ATX,E-ATX"
+          "TypeATX" : "m-ITX,m-ATX,ATX,E-ATX"
         },
         "Case4" : {
           "Navn" : "NZXT H700i",
           "Pris" : 1995,
           "Bilde" : "bilder/NZXT H700i.jpg",
-          "Type" : "E-ATX, ATX, mATX, mITX"
+          "TypeATX" : "E-ATX, ATX, mATX, mITX"
         },
         "Case5" : {
           "Navn" : "Fractal Design Define R6",
           "Pris" : 1349,
           "Bilde" : "bilder/Fractal Design Define R6.jpg",
-          "Type" : "ATX, mATX, mITX"
+          "TypeATX" : "ATX, mATX, mITX"
         },
         "Case6" : {
           "Navn" : "Cooler Master MasterCase H500M",
           "Pris" : 2130,
           "Bilde" : "bilder/Cooler Master MasterCase H500M.jpg",
-          "Type" : "ATX, mATX, mITX, E-ATX"
+          "TypeATX" : "ATX, mATX, mITX, E-ATX"
         },
         "Case7" : {
           "Navn" : "Corsair Carbide Air 540",
           "Pris" : 1319,
           "Bilde" : "bilder/Corsair Carbide Air 540.jpg",
-          "Type" : "mATX, ATX, E-ATX, mITX"
+          "TypeATX" : "mATX, ATX, E-ATX, mITX"
         }
       },
       "PSU" : {

@@ -265,12 +265,51 @@ h1{
   grid-gap: 10px;
   justify-content: center;
   text-align: center;
+  width: 100%;
+  display: grid;
+  font-family: GT Walsheim,Helvetica,sans-serif;
 }
 .gridperma{
   grid-column: span 1;
   grid-row: span 6;
+  font-size: 40px;
+  font-weight: 10;
+  margin-right: 300px;
+  font-family: GT Walsheim,Helvetica,sans-serif;
 }
 .gridmidler{
   grid-column: span 1;
-  grid-row: span 1
+  grid-row: span 1;
+  margin-top: 150px;
+  margin-bottom: -125px;
+  font-size: 20px;
+  font-weight: 70;
+  margin-right: 300px;
+  font-family: GT Walsheim,Helvetica,sans-serif;
+  background-color: white;
+  border: 2px solid lightgrey;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px;
+  transition: 0.5s;
+  margin: 0.5px;
+}
+.gridmidler:hover{
+  background-color: white;
+  transition: 0.5s;
+  border: 2px solid red;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px;
+}
+.gridperma>img{
+  width: 600px;
+  image-rendering: crisp-edges;
+}
+.gridperma>h1{
+  font-size: 40px;
+}
+.gridperma>h3{
+  font-size: 30px;
+  font-weight: 70;
 }
