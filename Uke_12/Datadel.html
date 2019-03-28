@@ -41,6 +41,8 @@
 
     <script type="text/javascript">
 
+
+
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
       document.getElementById("body").style.marginLeft = "250px";
@@ -95,6 +97,10 @@
 
       valgtDatadel.on("value",visDatadel);
     </script>
-
+    <script type="jQuery">
+    {{if objekt.Grensesnitt}}
+<p>Grensesnitt: ${objekt.Grensesnitt}</p>
+{{/if}}
+    </script>
   </body>
 </html>

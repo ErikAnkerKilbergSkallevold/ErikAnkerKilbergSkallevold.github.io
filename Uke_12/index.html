@@ -131,9 +131,12 @@ function filterFunction() {
           <article id="Datadel"class="Datadeler">
           <a href="Datadel.html?id=${urlId}">
              <div class="border">
-                <h1>${Data.Navn}</h1>
                 <img src="${Data.Bilde}" alt="">
-                <p>Pris: ${Data.Pris}</p>
+                <h1>${Data.Navn}</h1>
+                <span class="pris"> ${Data.Pris},- </span>
+
+
+
             </div>
           </a>
 
@@ -215,6 +218,12 @@ function filterFunction() {
 
 
     visAlle(); // Funksjon som kjøres når siden lastes
+    </script>
+
+    <script type="jQuery">
+    {{if objekt.Grensesnitt === undefined}}
+      <p>Grensesnitt: ${objekt.Grensesnitt}</p>
+    {{/if}}
     </script>
 
   </body>
