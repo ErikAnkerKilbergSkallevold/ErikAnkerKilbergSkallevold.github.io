@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Databaser</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB3rZD2VaJ6I9A7dlszNV3RPL8Sr194LbY",
+        authDomain: "minforstedatabase123.firebaseapp.com",
+        databaseURL: "https://minforstedatabase123.firebaseio.com",
+        projectId: "minforstedatabase123",
+        storageBucket: "minforstedatabase123.appspot.com",
+        messagingSenderId: "465800188658"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+      const db = firebase.database ();
+      const kontaktliste = db.ref("kontaktliste");
+
+      kontaktliste.push(
+            {
+              "firstName":"Erik Anker",
+              "middleName":"Kilberg",
+              "lastName": "Skallevold",
+              "telephone": 94868652,
+              "adress" : "Tollef Gravsvei",
+              "streetNumber" : 21,
+              "birthDate": 02092001,
+            }
+      );
+    </script>
+    
+    </body>
+</html>

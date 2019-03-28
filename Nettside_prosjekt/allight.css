@@ -91,3 +91,82 @@ main2{
 .usynig{
   grid-column: span 1;
 }
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content input{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown-content input:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.text4{
+  font-size: 16px;
+  text-align: center;
+}
+.text5{
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+.longboye{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: span 4;
+  background-image: url(Bilder/Fargerik.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: span 1;
+}
+footer{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(68, 201, 101);
+}
+.logoboks{
+  margin-top: 10px;
+}
+footer>section{
+  margin-left: auto;
+  margin-right: auto;
+}
+footer>section>.logoboks{
+  margin: auto;
+  padding-top: 50px;
+}

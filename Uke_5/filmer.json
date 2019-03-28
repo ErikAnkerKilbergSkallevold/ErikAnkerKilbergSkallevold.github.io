@@ -1,0 +1,22 @@
+{
+  "filmer":{
+    "3":{
+      "Tittel":"Sharknado",
+      "Regissør":"Bob Stern",
+      "Informasjon":"Universal Studios",
+      "År":2004
+    },
+    "5":{
+      "Tittel":"Star Wars",
+      "Regissør":"George Lucas",
+      "Informasjon":"Lucasfilm",
+      "År":2005
+    },
+    "8":{
+      "Tittel":"E.T.",
+      "Regissør":"Steven Spielberg",
+      "Informasjon":"Paramount",
+      "År":2009
+    }
+  }
+}

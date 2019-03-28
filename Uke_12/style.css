@@ -1,0 +1,276 @@
+.sticky{
+  top: 0;
+  position: fixed;
+  z-index: 2;
+}
+
+.sidenav {
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color: white;
+ overflow-x: hidden;
+ padding-top: 60px;
+ transition: 0.5s;
+}
+
+
+.sidenav a {
+ padding: 15px 8px 15px 8px;
+ text-decoration: none;
+ font-size: 25px;
+ color: black;
+ display: block;
+ font-family: GT Walsheim,Helvetica,sans-serif;
+ transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+ color: white;
+}
+
+
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 50px;
+ padding-bottom: 2px;
+}
+
+
+#main {
+ transition: margin-left .5s;
+ padding: 20px;
+}
+
+
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
+}
+.button{
+  background-color: transparent;
+  font-family: GT Walsheim,Helvetica,sans-serif;
+  color: white;
+  padding: 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 0px;
+  border: 2px solid white;
+  transition: 0.1s;
+
+}
+.button:hover{
+  color: white;
+  background-color: #e52437;
+  border: 2px solid red;
+  transition: 0.1s;
+  font-family: GT Walsheim,Helvetica,sans-serif;
+}
+.button.active{
+  background-color: #e52437;
+  color: white;
+  border: 2px solid red;
+  font-family: GT Walsheim,Helvetica,sans-serif;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
+  min-height: 1fr;
+  max-height: 1fr;
+  font-family: GT Walsheim,Helvetica,sans-serif;
+}
+
+@media (min-width:2000px) {
+  main{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+}
+
+@media (max-width:700px) {
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width:600px) {
+  main{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.border {
+  background-color: white;
+  border: 2px solid lightgrey;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px;
+  transition: 0.5s;
+}
+img{
+  max-width: 300px;
+}
+.border:hover {
+  background-color: white;
+  transition: 0.5s;
+  border: 2px solid red;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 0px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.banner{
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  height: 200%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sorterbutton{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.buttontekst{
+  font-size: 20px;
+  color:black;
+  font-family: sans-serif;
+}
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid #e52437;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #e52437;
+  color: white;
+}
+
+#myInput {
+  border-box: box-sizing;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  justify-content: center;
+  display: inline;
+  min-width: 94%;
+  text-align: center;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 100%;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.gridsøk{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.dropdowndiv{
+  margin-top: 100px;
+}
+.bannerdatadel{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+h1{
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+.border>p{
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+.pris{
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 300px;
+}
+.kjopna{
+  margin-left: 300px;
+}
+.kjopbutton{
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #333;
+  line-height: normal;
+}
+.valgtMain{
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.gridperma{
+  grid-column: span 1;
+  grid-row: span 6;
+}
+.gridmidler{
+  grid-column: span 1;
+  grid-row: span 1
+}
