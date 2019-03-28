@@ -260,3 +260,17 @@ h1{
   color: #333;
   line-height: normal;
 }
+.valgtMain{
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.gridperma{
+  grid-column: span 1;
+  grid-row: span 6;
+}
+.gridmidler{
+  grid-column: span 1;
+  grid-row: span 1
+}

@@ -83,9 +83,15 @@
             "Navn" : "AMD Ryzen Threadripper 1900X"
           }
         },
+
+
+
+
+
+
         "GPU" : {
           "GPU1" : {
-            "Hastighet" : 1710,
+            "HastighetGPU" : 1710,
             "Minne" : 8,
             "Type" : "GDDR6",
             "Bilde" : "bilder/rtx 2080.jpg",
@@ -94,7 +100,7 @@
             "Navn" : "GeForce RTX 2080"
           },
           "GPU2" : {
-            "Hastighet" : 1665,
+            "HastighetGPU" : 1665,
             "Minne" : 11,
             "Type" : "GDDR6",
             "Bilde" : "bilder/rtx 2080ti.jpg",
@@ -103,7 +109,7 @@
             "Navn" : "GeForce RTX 2080ti"
           },
           "GPU3" : {
-            "Hastighet" : 1815,
+            "HastighetGPU" : 1815,
             "Minne" : 8,
             "Type" : "GDDR6",
             "Bilde" : "bilder/GeForce RTX 2070.jpg",
@@ -112,7 +118,7 @@
             "Navn" : "GeForce RTX 2070"
           },
           "GPU4" : {
-            "Hastighet" : 1573,
+            "HastighetGPU" : 1573,
             "Minne" : 8,
             "Type" : "HBM2",
             "Bilde" : "bilder/Radeon RX Vega 56.jpg",
@@ -121,7 +127,7 @@
             "Navn" : "Radeon RX Vega 56"
           },
           "GPU5" : {
-            "Hastighet" : 1590,
+            "HastighetGPU" : 1590,
             "Minne" : 8,
             "Type" : "HBM2",
             "Bilde" : "bilder/Radeon RX Vega 64.jpg",
@@ -327,6 +333,7 @@
         "RAM" : {
           "RAM1" : {
             "Navn" : "G.Skill Trident Z Royal 16GB",
+            "Merke" : "G.Skill",
             "Mengde" : 16,
             "Antall" : "2x8",
             "Hastighet" : 3200,
@@ -338,6 +345,7 @@
           },
           "RAM2" : {
             "Navn" : "G.Skill Trident Z 16GB",
+            "Merke" : "G.Skill",
             "Mengde" : 16,
             "Antall" : "2x8",
             "Hastighet" : 3200,
@@ -349,6 +357,7 @@
           },
           "RAM3" : {
             "Navn" : "Corsair Dominator Torque 32GB",
+            "Merke" : "Corsair",
             "Mengde" : 32,
             "Antall" : "4x8",
             "Hastighet" : 3200,
@@ -360,6 +369,7 @@
           },
           "RAM4" : {
             "Navn" : "Corsair Vengeance LPX 128GB",
+            "Merke" : "Corsair",
             "Mengde" : 128,
             "Antall" : "8x16",
             "Hastighet" : 3600,
@@ -371,6 +381,7 @@
           },
           "RAM5" : {
             "Navn" : "Corsair Vengeance RGB PRO 64GB",
+            "Merke" : "Corsair",
             "Mengde" : 64,
             "Antall" : "8x8",
             "Hastighet" : 4000,
@@ -382,6 +393,7 @@
           },
           "RAM6" : {
             "Navn" : "Corsair Value 8GB",
+            "Merke" : "Corsair",
             "Mengde" : 8,
             "Antall" : "1x8",
             "Hastighet" : 2133,

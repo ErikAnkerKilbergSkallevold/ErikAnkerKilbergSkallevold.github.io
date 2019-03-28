@@ -79,15 +79,61 @@
         let objekt = snap.val();
         console.log(objekt);
 
-        main.innerHTML += `
-        <article class="valgtDatadel">
+        nyArtikkel = document.createElement("article");
+        nyArtikkel.setAttribute("class","valgtMain")
+
+
+        nyArtikkel.innerHTML += `
+          <div class="gridperma">
           <h1>${objekt.Navn}</h1>
           <h3>${objekt.Merke}</h3>
           <img src="${objekt.Bilde}" alt="Bilde av produkt"/>
           <b>Kr,- ${objekt.Pris}</b>
-          <p>Grensesnitt: ${objekt.Grensesnitt}</p>
-        </article>
-        `;
+          </div>
+          `
+
+
+
+        if(objekt.Grensesnitt){
+          nyArtikkel.innerHTML += `
+              <p>Grensesnitt: ${objekt.Grensesnitt}</p>
+          `;
+        }
+
+        if(objekt.Hastighet){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> ${objekt.Hastighet}GHz </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Kjerner){
+          nyArtikkel.innerHTML += `
+              <p> ${objekt.Kjerner} Kjerner</p>
+          `;
+        }
+
+        if(objekt.Trader){
+          nyArtikkel.innerHTML += `
+              <p>${objekt.Trader} Tråder</p>
+          `;
+        }
+
+        if(objekt.Minne){
+          nyArtikkel.innerHTML += `
+              <p> ${objekt.Minne} GB</p>
+          `;
+        }
+
+        if(objekt.Type){
+          nyArtikkel.innerHTML += `
+              <p> ${objekt.Type}</p>
+          `;
+        }
+
+        main.append(nyArtikkel);
 
       }
 
@@ -95,12 +141,11 @@
         console.log(snap.val());
       }
 
+
       valgtDatadel.on("value",visDatadel);
-    </script>
-    <script type="jQuery">
-    {{if objekt.Grensesnitt}}
-<p>Grensesnitt: ${objekt.Grensesnitt}</p>
-{{/if}}
+
+
+
     </script>
   </body>
 </html>
