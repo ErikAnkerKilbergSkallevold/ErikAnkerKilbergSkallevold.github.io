@@ -5,7 +5,7 @@
             "Hastighet": 4,
             "Kjerner" : 4,
             "Trader" : 8,
-            "Bilde" : "bilder4x/Intel Core i7-6700K.jpg",
+            "Bilde" : "bilder4x/Intel Core i7-6700K.png",
             "Pris" : 4500,
             "Merke" : "Intel",
             "Navn" : "Intel Core i7 6700k"
@@ -14,7 +14,7 @@
             "Hastighet": 3.6,
             "Kjerner" : 4,
             "Trader" : 4,
-            "Bilde" : "bilder4x/Intel Core i3-8100.jpg",
+            "Bilde" : "bilder4x/Intel Core i3-8100.png",
             "Pris" : 1390,
             "Merke" : "Intel",
             "Navn" : "Intel Core i3 8100"
@@ -23,7 +23,7 @@
             "Hastighet": 3.5,
             "Kjerner" : 4,
             "Trader" : 4,
-            "Bilde" : "bilder4x/Intel Core i5-6600K.jpg",
+            "Bilde" : "bilder4x/Intel Core i5-6600K.png",
             "Pris" : 3000,
             "Merke" : "Intel",
             "Navn" : "Intel Core i5 6600k"
@@ -32,7 +32,7 @@
             "Hastighet": 4.5,
             "Kjerner" : 8,
             "Trader" : 16,
-            "Bilde" : "bilder4x/AMD FX-8350 Black Edition.jpg",
+            "Bilde" : "bilder4x/AMD FX-8350 Black Edition.png",
             "Pris" : 4000,
             "Merke" : "AMD",
             "Navn" : "AMD FX-8350 Black Edition"
@@ -41,7 +41,7 @@
             "Hastighet": 5,
             "Kjerner" : 16,
             "Trader" : 8,
-            "Bilde" : "bilder4x/Intel Core i9-9900K.jpg",
+            "Bilde" : "bilder4x/Intel Core i9-9900K.png",
             "Pris" : 5500,
             "Merke" : "Intel",
             "Navn" : "Intel Core i9 9900k"
@@ -50,7 +50,7 @@
             "Hastighet": 4.35,
             "Kjerner" : 8,
             "Trader" : 16,
-            "Bilde" : "bilder4x/AMD Ryzen 7 2700X.jpg",
+            "Bilde" : "bilder4x/AMD Ryzen 7 2700X.png",
             "Pris" : 3499,
             "Merke" : "AMD",
             "Navn" : "AMD Ryzen 7 2700X"
@@ -59,7 +59,7 @@
             "Hastighet": 4.2,
             "Kjerner" : 6,
             "Trader" : 12,
-            "Bilde" : "bilder4x/AMD Ryzen 5 2600X.jpg",
+            "Bilde" : "bilder4x/AMD Ryzen 5 2600X.png",
             "Pris" : 2500,
             "Merke" : "AMD",
             "Navn" : "Ryzen 5 2600X"
@@ -68,7 +68,7 @@
             "Hastighet": 3.8,
             "Kjerner" : 28,
             "Trader" : 56,
-            "Bilde" : "bilder4x/Intel Xeon Platinum 8180.jpg",
+            "Bilde" : "bilder4x/Intel Xeon Platinum 8180.png",
             "Pris" : 111999,
             "Merke" : "Intel",
             "Navn" : "Intel Xeon Platinum 8180"
@@ -77,7 +77,7 @@
             "Hastighet": 3.8,
             "Kjerner" : 8,
             "Trader" : 16,
-            "Bilde" : "bilder4x/AMD Ryzen Threadripper 1900X.jpg",
+            "Bilde" : "bilder4x/AMD Ryzen Threadripper 1900X.png",
             "Pris" : 3511,
             "Merke" : "AMD",
             "Navn" : "AMD Ryzen Threadripper 1900X"
@@ -94,7 +94,7 @@
             "HastighetMHz" : 1710,
             "Minne" : 8,
             "Type" : "GDDR6",
-            "Bilde" : "bilder4x/rtx 2080.jpg",
+            "Bilde" : "bilder4x/rtx 2080.png",
             "Pris" : 9949,
             "Merke" : "nVidia",
             "Navn" : "GeForce RTX 2080"
@@ -103,7 +103,7 @@
             "HastighetMHz" : 1665,
             "Minne" : 11,
             "Type" : "GDDR6",
-            "Bilde" : "bilder4x/rtx 2080ti.jpg",
+            "Bilde" : "bilder4x/rtx 2080ti.png",
             "Pris" : 14689,
             "Merke" : "nVidia",
             "Navn" : "GeForce RTX 2080ti"
@@ -112,7 +112,7 @@
             "HastighetMHz" : 1815,
             "Minne" : 8,
             "Type" : "GDDR6",
-            "Bilde" : "bilder4x/GeForce RTX 2070.jpg",
+            "Bilde" : "bilder4x/GeForce RTX 2070.png",
             "Pris" : 7490,
             "Merke" : "nVidia",
             "Navn" : "GeForce RTX 2070"
@@ -121,7 +121,7 @@
             "HastighetMHz" : 1573,
             "Minne" : 8,
             "Type" : "HBM2",
-            "Bilde" : "bilder4x/Radeon RX Vega 56.jpg",
+            "Bilde" : "bilder4x/Radeon RX Vega 56.png",
             "Pris" : 3649,
             "Merke" : "AMD",
             "Navn" : "Radeon RX Vega 56"
@@ -130,7 +130,7 @@
             "HastighetMHz" : 1590,
             "Minne" : 8,
             "Type" : "HBM2",
-            "Bilde" : "bilder4x/Radeon RX Vega 64.jpg",
+            "Bilde" : "bilder4x/Radeon RX Vega 64.png",
             "Pris" : 4899,
             "Merke" : "AMD",
             "Navn" : "Radeon RX Vega 64"
@@ -147,7 +147,7 @@
             "Navn" : "Samsung 970 EVO Plus 1TB",
             "Merke" : "Samsung",
             "Pris" : 2849,
-            "Bilde" : "bilder4x/Samsung 970 EVO Plus 1TB.jpg"
+            "Bilde" : "bilder4x/Samsung 970 EVO Plus 1TB.png"
           },
           "SSD2" : {
             "Grensesnitt" : "M.2 (PCIe Gen 3.0 x 4, NVMe)",
@@ -159,7 +159,7 @@
             "Navn" : "Samsung 970 EVO Plus 500GB",
             "Merke" : "Samsung",
             "Pris" : 1439,
-            "Bilde" : "bilder4x/Samsung 970 EVO Plus 500GB.jpg"
+            "Bilde" : "bilder4x/Samsung 970 EVO Plus 500GB.png"
           },
           "SSD3" : {
             "Grensesnitt" : "mSATA (SATA 3.0)",
@@ -171,7 +171,7 @@
             "Navn" : "Samsung 860 EVO 500GB",
             "Merke" : "Samsung",
             "Pris" : 999,
-            "Bilde" : "bilder4x/Samsung 860 EVO 500GB.jpg"
+            "Bilde" : "bilder4x/Samsung 860 EVO 500GB.png"
           },
           "SSD4" : {
             "Grensesnitt" : "M.2 (PCI-e)",
@@ -183,7 +183,7 @@
             "Navn" : "Samsung 970 EVO Plus 250GB",
             "Merke" : "Samsung",
             "Pris" : 999,
-            "Bilde" : "bilder4x/Samsung 970 EVO Plus 250GB.jpg"
+            "Bilde" : "bilder4x/Samsung 970 EVO Plus 250GB.png"
           },
           "SSD5" : {
             "Grensesnitt" : "SATA 6.0Gbps",
@@ -195,7 +195,7 @@
             "Navn" : "WD Blue 3D 500GB",
             "Merke" : "Western Digital",
             "Pris" : 749,
-            "Bilde" : "bilder4x/WD Blue 3D 500GB.jpg"
+            "Bilde" : "bilder4x/WD Blue 3D 500GB.png"
           },
           "SSD6" : {
             "Grensesnitt" : "SATA 6.0Gbps",
@@ -207,7 +207,7 @@
             "Navn" : "WD Blue 3D 1TB",
             "Merke" : "Western Digital",
             "Pris" : 1399,
-            "Bilde" : "bilder4x/WD Blue 3D 1TB.jpg"
+            "Bilde" : "bilder4x/WD Blue 3D 1TB.png"
           },
           "SSD7" : {
             "Grensesnitt" : "SATA 6.0Gbps",
@@ -219,7 +219,7 @@
             "Navn" : "WD Blue 3D 250GB",
             "Merke" : "Western Digital",
             "Pris" : 549,
-            "Bilde" : "bilder4x/WD Blue 3D 250GB.jpg"
+            "Bilde" : "bilder4x/WD Blue 3D 250GB.png"
           }
         },
 
@@ -240,7 +240,7 @@
             "Navn" : "WD Desktop Blue 1TB",
             "Merke" : "Western Digital",
             "Pris" : 499,
-            "Bilde" : "bilder4x/WD Desktop Blue 1TB.jpg"
+            "Bilde" : "bilder4x/WD Desktop Blue 1TB.png"
           },
           "HDD2" : {
             "Grensesnitt" : "SATA 6.0Gbps",
@@ -252,7 +252,7 @@
             "Navn" : "WD Desktop Blue 4TB",
             "Merke" : "Western Digital",
             "Pris" : 1129,
-            "Bilde" : "bilder4x/WD Desktop Blue 4TB.jpg"
+            "Bilde" : "bilder4x/WD Desktop Blue 4TB.png"
           },
           "HDD3" : {
             "Grensesnitt" : "SATA 6.0Gbps",
@@ -264,7 +264,7 @@
             "Navn" : "WD Desktop Black 6TB",
             "Merke" : "Western Digital",
             "Pris" : 2699,
-            "Bilde" : "bilder4x/WD Desktop Black 6TB.jpg"
+            "Bilde" : "bilder4x/WD Desktop Black 6TB.png"
           },
           "HDD4" : {
             "Grensesnitt" : "SATA 6.0Gbps",
@@ -276,7 +276,7 @@
             "Navn" : "WD Desktop Black 4TB",
             "Merke" : "Western Digital",
             "Pris" : 2175,
-            "Bilde" : "bilder4x/WD Desktop Black 4TB.jpg"
+            "Bilde" : "bilder4x/WD Desktop Black 4TB.png"
           }
         },
 
@@ -293,7 +293,7 @@
             "Chipset" : "Z390",
             "Minneslotter" : 4,
             "Socket" : "LGA-1151",
-            "Bilde" : "bilder4x/ASUS ROG MAXIMUS XI EXTREME.jpg",
+            "Bilde" : "bilder4x/ASUS ROG MAXIMUS XI EXTREME.png",
             "Pris" : 5490,
             "Merke" : "ASUS",
             "Navn" : "ASUS ROG MAXIMUS XI EXTREME",
@@ -303,7 +303,7 @@
             "Chipset" : "Z370",
             "Minneslotter" : 4,
             "Socket" : "LGA-1151",
-            "Bilde" : "bilder4x/ASUS MAXIMUS X FORMULA.jpg",
+            "Bilde" : "bilder4x/ASUS MAXIMUS X FORMULA.png",
             "Pris" : 4290,
             "Merke" : "ASUS",
             "Navn" : "ASUS MAXIMUS X FORMULA",
@@ -313,7 +313,7 @@
             "Chipset" : "X399",
             "Minneslotter" : 4,
             "Socket" : "TR-4",
-            "Bilde" : "bilder4x/ASUS ROG ZENITH EXTREME ALPHA.jpg",
+            "Bilde" : "bilder4x/ASUS ROG ZENITH EXTREME ALPHA.png",
             "Pris" : 7190,
             "Merke" : "ASUS",
             "Navn" : "ASUS ROG ZENITH EXTREME ALPHA",
@@ -323,7 +323,7 @@
             "Chipset" : "X470",
             "Minneslotter" : 4,
             "Socket" : "AM4",
-            "Bilde" : "bilder4x/ASUS ROG CROSSHAIR VII HERO WI-FI.jpg",
+            "Bilde" : "bilder4x/ASUS ROG CROSSHAIR VII HERO WI-FI.png",
             "Pris" : 3403,
             "Merke" : "ASUS",
             "Navn" : "ASUS ROG CROSSHAIR VII HERO WI-FI",
@@ -341,7 +341,7 @@
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
             "Pris" : 2399,
-            "Bilde" : "bilder4x/G.Skill Trident Z Royal.jpg"
+            "Bilde" : "bilder4x/G.Skill Trident Z Royal.png"
           },
           "RAM2" : {
             "Navn" : "G.Skill Trident Z 16GB",
@@ -353,7 +353,7 @@
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
             "Pris" : 2599,
-            "Bilde" : "bilder4x/G.Skill Trident Z.jpg"
+            "Bilde" : "bilder4x/G.Skill Trident Z.png"
           },
           "RAM3" : {
             "Navn" : "Corsair Dominator Torque 32GB",
@@ -365,7 +365,7 @@
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
             "Pris" : 5799,
-            "Bilde" : "bilder4x/Corsair Dominator Torque.jpg"
+            "Bilde" : "bilder4x/Corsair Dominator Torque.png"
           },
           "RAM4" : {
             "Navn" : "Corsair Vengeance LPX 128GB",
@@ -377,7 +377,7 @@
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
             "Pris" : 18599,
-            "Bilde" : "bilder4x/Corsair Vengeance LPX DDR4 3600MHz 128GB.jpg"
+            "Bilde" : "bilder4x/Corsair Vengeance LPX DDR4 3600MHz 128GB.png"
           },
           "RAM5" : {
             "Navn" : "Corsair Vengeance RGB PRO 64GB",
@@ -389,7 +389,7 @@
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
             "Pris" : 16199,
-            "Bilde" : "bilder4x/Corsair Vengeance RGB PRO DDR4 64GB.jpg"
+            "Bilde" : "bilder4x/Corsair Vengeance RGB PRO DDR4 64GB.png"
           },
           "RAM6" : {
             "Navn" : "Corsair Value 8GB",
@@ -401,7 +401,7 @@
             "Generasjon" : "DDR4",
             "ECC" : "Ikke-ECC",
             "Pris" : 549,
-            "Bilde" : "bilder4x/Corsair Value DDR4 2133MHz 8GB.jpg"
+            "Bilde" : "bilder4x/Corsair Value DDR4 2133MHz 8GB.png"
           }
         },
         "Kjoler" : {
@@ -409,49 +409,49 @@
             "Navn" : "Noctua NH-D15",
             "Merke" : "Noctua",
             "Pris" : 949,
-            "Bilde" : "bilder4x/Noctua NH-D15.jpg",
+            "Bilde" : "bilder4x/Noctua NH-D15.png",
             "KjølerType" : "Luft"
           },
           "Kjoler2" : {
             "Navn" : "Cooler Master Hyper 212 Evo",
             "Merke" : "Cooler Master",
             "Pris" : 299,
-            "Bilde" : "bilder4x/Cooler Master Hyper 212 Evo.jpg",
+            "Bilde" : "bilder4x/Cooler Master Hyper 212 Evo.png",
             "KjølerType" : "Luft"
           },
           "Kjoler3" : {
             "Navn" : "Cryorig C1",
             "Merke" : "Cryorig",
             "Pris" : 749,
-            "Bilde" : "bilder4x/Cryorig C1.jpg",
+            "Bilde" : "bilder4x/Cryorig C1.png",
             "KjølerType" : "Luft"
           },
           "Kjoler4" : {
             "Navn" : "Be Quiet! Dark Rock PRO 3",
             "Merke" : "Be Quiet!",
             "Pris" : 899,
-            "Bilde" : "bilder4x/Be Quiet! Dark Rock PRO 3.jpg",
+            "Bilde" : "bilder4x/Be Quiet! Dark Rock PRO 3.png",
             "KjølerType" : "Luft"
           },
           "Kjoler5" : {
             "Navn" : "ASUS ROG RYUO 240",
             "Merke" : "ASUS",
             "Pris" : 1790,
-            "Bilde" : "bilder4x/ASUS ROG RYUO 240.jpg",
+            "Bilde" : "bilder4x/ASUS ROG RYUO 240.png",
             "KjølerType" : "Vann"
           },
           "Kjoler6" : {
             "Navn" : "ASUS ROG RYUJIN 360",
             "Merke" : "ASUS",
             "Pris" : 2590,
-            "Bilde" : "bilder4x/ASUS ROG RYUJIN 360.jpg",
+            "Bilde" : "bilder4x/ASUS ROG RYUJIN 360.png",
             "KjølerType" : "Vann"
           },
           "Kjoler7" : {
             "Navn" : "Corsair Hydro H115i RGB Platinum",
             "Merke" : "Corsair",
             "Pris" : 1799,
-            "Bilde" : "bilder4x/Corsair Hydro H115i RGB Platinum.jpg",
+            "Bilde" : "bilder4x/Corsair Hydro H115i RGB Platinum.png",
             "KjølerType" : "Vann"
         }
       },
@@ -459,43 +459,43 @@
         "Case1" : {
           "Navn" : "Corsair Obsidian 1000D Super Tower Case",
           "Pris" : 5490,
-          "Bilde" : "bilder4x/Corsair Obsidian 1000D Super Tower Case.jpg",
+          "Bilde" : "bilder4x/Corsair Obsidian 1000D Super Tower Case.png",
           "TypeATX" : "E-ATX, ATX, mATX, mITX"
         },
         "Case2" : {
           "Navn" : "Phanteks Enthoo Elite Extreme Case",
           "Pris" : 8999,
-          "Bilde" : "bilder4x/Phanteks Enthoo Elite Extreme Case.jpg",
+          "Bilde" : "bilder4x/Phanteks Enthoo Elite Extreme Case.png",
           "TypeATX" : "ATX, EATX, uATX, mITX, SSI EEB"
         },
         "Case3" : {
           "Navn" : "Cooler Master Cosmos C700P",
           "Pris" : 3503,
-          "Bilde" : "bilder4x/Cooler Master Cosmos C700P.jpg",
+          "Bilde" : "bilder4x/Cooler Master Cosmos C700P.png",
           "TypeATX" : "m-ITX,m-ATX,ATX,E-ATX"
         },
         "Case4" : {
           "Navn" : "NZXT H700i",
           "Pris" : 1995,
-          "Bilde" : "bilder4x/NZXT H700i.jpg",
+          "Bilde" : "bilder4x/NZXT H700i.png",
           "TypeATX" : "E-ATX, ATX, mATX, mITX"
         },
         "Case5" : {
           "Navn" : "Fractal Design Define R6",
           "Pris" : 1349,
-          "Bilde" : "bilder4x/Fractal Design Define R6.jpg",
+          "Bilde" : "bilder4x/Fractal Design Define R6.png",
           "TypeATX" : "ATX, mATX, mITX"
         },
         "Case6" : {
           "Navn" : "Cooler Master MasterCase H500M",
           "Pris" : 2130,
-          "Bilde" : "bilder4x/Cooler Master MasterCase H500M.jpg",
+          "Bilde" : "bilder4x/Cooler Master MasterCase H500M.png",
           "TypeATX" : "ATX, mATX, mITX, E-ATX"
         },
         "Case7" : {
           "Navn" : "Corsair Carbide Air 540",
           "Pris" : 1319,
-          "Bilde" : "bilder4x/Corsair Carbide Air 540.jpg",
+          "Bilde" : "bilder4x/Corsair Carbide Air 540.png",
           "TypeATX" : "mATX, ATX, E-ATX, mITX"
         }
       },
@@ -506,7 +506,7 @@
           "Watt" : 750,
           "80Plus" : "80 PLUS Gold",
           "Modulaer" : "Modulaer",
-          "Bilde" : "bilder4x/Corsair RM750x.jpg",
+          "Bilde" : "bilder4x/Corsair RM750x.png",
           "Pris" : 1299
         },
         "PSU2" : {
@@ -515,7 +515,7 @@
           "Watt" : 550,
           "80Plus" : "80 PLUS Bronze",
           "Modulaer" : "Semi-Modulaer",
-          "Bilde" : "bilder4x/Cooler Master MasterWatt 550.jpg",
+          "Bilde" : "bilder4x/Cooler Master MasterWatt 550.png",
           "Pris" : 778
         },
         "PSU3" : {
@@ -524,7 +524,7 @@
           "Watt" : 450,
           "80Plus" : "80 PLUS",
           "Modulaer" : "Ikke-Modulaer",
-          "Bilde" : "bilder4x/Corsair VS450 450W.jpg",
+          "Bilde" : "bilder4x/Corsair VS450 450W.png",
           "Pris" : 415
         },
         "PSU4" : {
@@ -533,7 +533,7 @@
           "Watt" : 1600,
           "80Plus" : "80 PLUS Titanium",
           "Modulaer" : "Modulaer",
-          "Bilde" : "bilder4x/Corsair AX1600i.jpg",
+          "Bilde" : "bilder4x/Corsair AX1600i.png",
           "Pris" : 4999
         },
         "PSU5" : {
@@ -542,7 +542,7 @@
           "Watt" : 850,
           "80Plus" : "80 PLUS Titanium",
           "Modulaer" : "Modulaer",
-          "Bilde" : "bilder4x/ASUS ROG THOR 850.jpg",
+          "Bilde" : "bilder4x/ASUS ROG THOR 850.png",
           "Pris" : 2490
         }
       }
