@@ -22,10 +22,10 @@
     <nav>
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="button active" href="index.html">Hjem</a>
-        <a class="button" href="#">Datadeler</a>
+        <a class="button" href="hjem.html">Hjem</a>
+        <a class="button active" href="index.html">Datadeler</a>
         <a class="button" href="#">Salg</a>
-        <a class="button" href="#">Om oss</a>
+        <a class="button" href="login.html">Kontakt oss</a>
       </div>
     </nav>
   </header>
@@ -85,16 +85,25 @@
 
         nyArtikkel.innerHTML += `
           <div class="gridperma">
-          <h1>${objekt.Navn}</h1>
-          <h3>${objekt.Merke}</h3>
-          <img src="${objekt.Bilde}" alt="Bilde av produkt"/>
+          <h3>${objekt.Navn}</h3>
+          <h1>${objekt.Merke}</h1>
+          <div class="varebak">
+          <img class="vareimg" src="${objekt.Bilde}" alt="Bilde av produkt"/>
+          </div>
           <br>
-          <b>Kr,- ${objekt.Pris}</b>
+          <b>Kr,- ${objekt.forPris}</b>
           </div>
           `
 
 
+        if(objekt.nyPris){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Ny Pris: ${objekt.Pris},- </p>
+          </div>
 
+          `;
+        }
 
         if(objekt.GB){
           nyArtikkel.innerHTML += `
@@ -218,5 +227,19 @@
 
 
     </script>
+
+    <footer>
+        <div class="footertekst">
+          <p>Vi i Dataspess stiller alltid de høyeste forventningen til produktene våre og sørger for at de er av ypperste kvalitet.</p>
+          <p>Hvis produktet skulle ha ett problem, vær så snill å kontakt oss.</p>
+        </div>
+          <div class="Kontakt">
+            <p>E-post (24/7): kundeservice@dataspess.no</p>
+            <br>
+            <p>Telefon (08:30-17:00): 96541289</p>
+            <br>
+            <p>Faks (24/7): 95541289</p>
+          </div>
+    </footer>
   </body>
 </html>
