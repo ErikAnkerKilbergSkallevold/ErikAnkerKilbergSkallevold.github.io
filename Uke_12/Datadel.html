@@ -123,6 +123,91 @@
           `;
         }
 
+        if(objekt.Grensesnitt){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Grensesnitt: ${objekt.Grensesnitt}</p>
+          </div>
+          `;
+        }
+
+        if(objekt.KjølerType){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Type kjøler: ${objekt.KjølerType} </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Watt){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Watt: ${objekt.Watt}W </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Åttiplus){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> 80Plus sertifikasjon: ${objekt.Åttiplus} </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Modulær){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Modulæritet: ${objekt.Modulær} </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.TypeATX){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> ${objekt.TypeATX} </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Chipset){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Chipset: ${objekt.Chipset}</p>
+          </div>
+          `;
+        }
+
+        if(objekt.Socket){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Socket: ${objekt.Socket}</p>
+          </div>
+          `;
+        }
+
+        if(objekt.Formfaktor){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Formfaktor: ${objekt.Formfaktor}</p>
+          </div>
+          `;
+        }
+
+        if(objekt.Minneslotter){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+              <p>Antall minneslotter: ${objekt.Minneslotter}</p>
+          </div>
+          `;
+        }
+
         if(objekt.RPM){
           nyArtikkel.innerHTML += `
           <div class="gridmidler">
@@ -174,10 +259,55 @@
           `;
         }
 
+        if(objekt.Generasjon){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Type RAM: ${objekt.Generasjon} </p>
+          </div>
+
+          `;
+        }
+
         if(objekt.HastighetMHz){
           nyArtikkel.innerHTML += `
           <div class="gridmidler">
             <p> Klokkehastighet: ${objekt.HastighetMHz}MHz </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Timing){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Timings: ${objekt.Timing} </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Mengde){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> ${objekt.Mengde}GB </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.Antall){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> Antall brikker: ${objekt.Antall} </p>
+          </div>
+
+          `;
+        }
+
+        if(objekt.ECC){
+          nyArtikkel.innerHTML += `
+          <div class="gridmidler">
+            <p> ECC: ${objekt.ECC} </p>
           </div>
 
           `;

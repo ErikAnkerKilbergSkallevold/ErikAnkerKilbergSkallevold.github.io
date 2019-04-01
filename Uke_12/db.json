@@ -458,42 +458,49 @@
       "Case" : {
         "Case1" : {
           "Navn" : "Corsair Obsidian 1000D Super Tower Case",
+          "Merke" : "Corsair",
           "forPris" : 5490,
           "Bilde" : "bilder/Corsair Obsidian 1000D Super Tower Case.jpg",
           "TypeATX" : "E-ATX, ATX, mATX, mITX"
         },
         "Case2" : {
           "Navn" : "Phanteks Enthoo Elite Extreme Case",
+          "Merke" : "Phanteks",
           "forPris" : 8999,
           "Bilde" : "bilder/Phanteks Enthoo Elite Extreme Case.jpg",
           "TypeATX" : "ATX, EATX, uATX, mITX, SSI EEB"
         },
         "Case3" : {
           "Navn" : "Cooler Master Cosmos C700P",
+          "Merke" : "Cooler Master",
           "forPris" : 3503,
           "Bilde" : "bilder/Cooler Master Cosmos C700P.jpg",
           "TypeATX" : "m-ITX,m-ATX,ATX,E-ATX"
         },
         "Case4" : {
           "Navn" : "NZXT H700i",
+          "Merke" : "NZXT",
           "forPris" : 1995,
           "Bilde" : "bilder/NZXT H700i.jpg",
           "TypeATX" : "E-ATX, ATX, mATX, mITX"
         },
         "Case5" : {
           "Navn" : "Fractal Design Define R6",
+          "Merke" : "Fractal Design",
           "forPris" : 1349,
           "Bilde" : "bilder/Fractal Design Define R6.jpg",
           "TypeATX" : "ATX, mATX, mITX"
         },
         "Case6" : {
           "Navn" : "Cooler Master MasterCase H500M",
+          "Merke" : "Cooler Master",
           "forPris" : 2130,
           "Bilde" : "bilder/Cooler Master MasterCase H500M.jpg",
           "TypeATX" : "ATX, mATX, mITX, E-ATX"
         },
         "Case7" : {
           "Navn" : "Corsair Carbide Air 540",
+          "Merke" : "Corsair",
           "forPris" : 1319,
           "Bilde" : "bilder/Corsair Carbide Air 540.jpg",
           "TypeATX" : "mATX, ATX, E-ATX, mITX"
@@ -504,8 +511,8 @@
           "Navn" : "Corsair RM750x",
           "Merke" : "Corsair",
           "Watt" : 750,
-          "80Plus" : "80 PLUS Gold",
-          "Modulaer" : "Modulaer",
+          "Åttiplus" : "80 PLUS Gold",
+          "Modulær" : "Modulær",
           "Bilde" : "bilder/Corsair RM750x.jpg",
           "forPris" : 1299
         },
@@ -513,8 +520,8 @@
           "Navn" : "Cooler Master MasterWatt 550",
           "Merke" : "Cooler Master",
           "Watt" : 550,
-          "80Plus" : "80 PLUS Bronze",
-          "Modulaer" : "Semi-Modulaer",
+          "Åttiplus" : "80 PLUS Bronze",
+          "Modulær" : "Semi-Modulær",
           "Bilde" : "bilder/Cooler Master MasterWatt 550.jpg",
           "forPris" : 778
         },
@@ -522,8 +529,8 @@
           "Navn" : "Corsair VS450",
           "Merke" : "Corsair",
           "Watt" : 450,
-          "80Plus" : "80 PLUS",
-          "Modulaer" : "Ikke-Modulaer",
+          "Åttiplus" : "80 PLUS",
+          "Modulær" : "Ikke-Modulær",
           "Bilde" : "bilder/Corsair VS450 450W.jpg",
           "forPris" : 415
         },
@@ -531,8 +538,8 @@
           "Navn" : "Corsair AX1600i",
           "Merke" : "Corsair",
           "Watt" : 1600,
-          "80Plus" : "80 PLUS Titanium",
-          "Modulaer" : "Modulaer",
+          "Åttiplus" : "80 PLUS Titanium",
+          "Modulær" : "Modulær",
           "Bilde" : "bilder/Corsair AX1600i.jpg",
           "forPris" : 4999
         },
@@ -540,8 +547,8 @@
           "Navn" : "ASUS ROG THOR 850",
           "Merke" : "ASUS",
           "Watt" : 850,
-          "80Plus" : "80 PLUS Titanium",
-          "Modulaer" : "Modulaer",
+          "Åttiplus" : "80 PLUS Titanium",
+          "Modulær" : "Modulær",
           "Bilde" : "bilder/ASUS ROG THOR 850.jpg",
           "forPris" : 2490
         }
@@ -571,46 +578,48 @@
           "Type" : "GDDR6"
         },
         "Salg2" : {
-          "Navn" : "ZOTAC GeForce RTX 2080 AMP Extreme",
-          "Merke" : "nVidia",
-          "Bilde" : "nye bilder/ZOTAC GeForce RTX 2080 AMP Extreme.jpg",
-          "forPris" : 8990,
-          "Pris" : 8399,
-          "Prosent" : 7,
-          "HastighetMHz" : 1710,
-          "Minne" : 8,
-          "Type" : "GDDR6"
+          "Navn" : "MSI X99A RAIDER",
+          "Merke" : "MSi",
+          "Bilde" : "nye bilder/MSI X99A RAIDER.jpg",
+          "forPris" : 2289,
+          "Pris" : 1649,
+          "Prosent" : 29,
+          "Minneslotter" : 8,
+          "Chipset" : "X99",
+          "Socket" : "LGA2011-v3",
+          "Formfaktor" : "ATX"
         },
         "Salg3" : {
-          "Navn" : "ZOTAC GeForce RTX 2080 AMP Extreme",
-          "Merke" : "nVidia",
-          "Bilde" : "nye bilder/ZOTAC GeForce RTX 2080 AMP Extreme.jpg",
-          "forPris" : 8990,
-          "Pris" : 8399,
-          "Prosent" : 7,
-          "HastighetMHz" : 1710,
-          "Minne" : 8,
-          "Type" : "GDDR6"
+          "Navn" : "ASUS P10S WS",
+          "Merke" : "ASUS",
+          "Bilde" : "nye bilder/ASUS P10S WS.jpg",
+          "forPris" : 2099,
+          "Pris" : 1649,
+          "Prosent" : 21,
+          "Chipset" : "C236",
+          "Minneslotter" : 4,
+          "Socket" : "LGA1151",
+          "Formfaktor" : "ATX"
         },
         "Salg4" : {
-          "Navn" : "ZOTAC GeForce RTX 2080 AMP Extreme",
-          "Merke" : "nVidia",
-          "Bilde" : "nye bilder/ZOTAC GeForce RTX 2080 AMP Extreme.jpg",
-          "forPris" : 8990,
-          "Pris" : 8399,
-          "Prosent" : 7,
-          "HastighetMHz" : 1710,
-          "Minne" : 8,
-          "Type" : "GDDR6"
+          "Hastighet": 4,
+          "Kjerner" : 4,
+          "Trader" : 4,
+          "Bilde" : "nye bilder/AMD Athlon X4 880K Black Edition.jpg",
+          "forPris" : 829,
+          "Merke" : "AMD",
+          "Navn" : "AMD Athlon X4 880K Black Edition",
+          "Pris" : 729,
+          "Prosent" : 12
         },
         "Salg5" : {
-          "Navn" : "ZOTAC GeForce RTX 2080 AMP Extreme",
+          "Navn" : "Palit GeForce RTX 2080 GamingPro OC",
           "Merke" : "nVidia",
-          "Bilde" : "nye bilder/ZOTAC GeForce RTX 2080 AMP Extreme.jpg",
-          "forPris" : 8990,
-          "Pris" : 8399,
-          "Prosent" : 7,
-          "HastighetMHz" : 1710,
+          "Bilde" : "nye bilder/Palit GeForce RTX 2080 GamingPro OC.jpg",
+          "forPris" : 8490,
+          "Pris" : 7599,
+          "Prosent" : 10,
+          "HastighetMHz" : 1815,
           "Minne" : 8,
           "Type" : "GDDR6"
         },
@@ -620,21 +629,21 @@
           "Bilde" : "nye bilder/ZOTAC GeForce RTX 2080 AMP Extreme.jpg",
           "forPris" : 8990,
           "Pris" : 8399,
-          "Prosent" : 7,
+          "Prosent" : 8,
           "HastighetMHz" : 1710,
           "Minne" : 8,
           "Type" : "GDDR6"
         },
         "Salg7" : {
-          "Navn" : "ZOTAC GeForce RTX 2080 AMP Extreme",
-          "Merke" : "nVidia",
-          "Bilde" : "nye bilder/ZOTAC GeForce RTX 2080 AMP Extreme.jpg",
-          "forPris" : 8990,
-          "Pris" : 8399,
-          "Prosent" : 7,
-          "HastighetMHz" : 1710,
+          "Navn" : "ASUS Radeon RX Vega 64 ROG Strix OC",
+          "Merke" : "AMD",
+          "Bilde" : "nye bilder/ASUS Radeon RX Vega 64 ROG Strix OC.jpg",
+          "forPris" : 5349,
+          "Pris" : 4899,
+          "Prosent" : 8,
+          "HastighetMHz" : 1590,
           "Minne" : 8,
-          "Type" : "GDDR6"
+          "Type" : "HBM2"
         },
         "Salg8" : {
           "Navn" : "ZOTAC GeForce RTX 2080 AMP Extreme",
