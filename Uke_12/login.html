@@ -8,10 +8,22 @@
     <title>Log in</title>
     <link rel="stylesheet" href="login.css">
 </head>
+<header>
+  <nav>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <img src="bilder4x/komplett logo.png" alt="Logo">
+      <a class="button active" href="hjem.html">Hjem</a>
+      <a class="button" href="index.html">Datadeler</a>
+      <a class="button" href="#">Salg</a>
+      <a class="button" href="chat.html">Kontakt oss</a>
+      <a class="button active" href="login.html">Logg inn</a>
+    </div>
+  </nav>
+</header>
 <body>
-    <img style="justify-content: center;" src="bilder4x/Komplett banner.png" alt="Banner">
-    <h1>Dataspess kundeservice</h1>
-    <div id="firebaseui-auth-container"></div>
+  <h1>Dataspess kundeservice</h1>
+  <div id="firebaseui-auth-container"></div>
 
 
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
