@@ -3,15 +3,15 @@ html {
 }
 body {
     background-color: whitesmoke;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .body {
     min-height: 100vh;
-    max-width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
 
-    background-color: lightgrey;
+    background-color: white;
     font-family: helvetica;
 
     display: grid;
@@ -30,8 +30,8 @@ header {
 
 #title {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 
 }
 
@@ -46,7 +46,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
     background-color: #2158b2;
     text-align: center;
-
+    transition: 0.5s;
 }
 
 @media (max-width: 900px) {
@@ -72,20 +72,25 @@ nav a {
     padding: 5px;
     color: white;
     text-decoration: none;
+    transition: 0.5s;
 }
 nav > #headertext {
     color: white;
     padding: 5px 40px;
     background-color: green;
+
 }
 nav > a:hover {
     background-color: #457bd3;
+    transition: 0.5s;
 }
 
 main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 5px;
+
+
 }
 
 .gallery {
@@ -95,17 +100,25 @@ main {
 
 .sp6 {
     grid-column: span 6;
+
+
 }
 .sp4 {
     grid-column: span 4;
+
+
 }
 
 .sp3 {
     grid-column: span 3;
+
+
 }
 
 .sp2 {
     grid-column: span 2;
+
+
 }
 @media (max-width: 900px) {
     .sp6, .sp4, .sp3, .sp2 {
@@ -114,24 +127,21 @@ main {
 }
 
 .ad img {
-    /*border: 1px solid black;*/
     width: 100%;
 }
 
 
-main .ad {
+.ad {
    padding: 5px;
    margin-bottom: 2px;
    border: 1px solid black;
    border-radius: 2px;
-}
-
-footer .ad {
-   padding: 5px;
-   margin-bottom: 2px;
-
-}
-
+   transition: 0.1s;
+ }
+ .ad:hover{
+   border: 1px solid green;
+   transition: 0.1s;
+ }
 .ad p {
     margin: 5px 0;
     padding: 0;
@@ -145,19 +155,10 @@ footer .ad {
     font-weight: bold;
 }
 
-.ingress {
-    font-weight: bold;
-    color: #2158b2;
-}
-
 footer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     display-items: center;
-    background-color: beige;
-    padding: 0px 5px;
-}
-
-.person {
-    border-radius: 100%;
+    background-color: beige;s
+    grid-gap: 5px;
 }
