@@ -162,3 +162,7 @@ footer {
     background-color: beige;s
     grid-gap: 5px;
 }
+#undernav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
