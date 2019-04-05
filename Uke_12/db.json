@@ -902,7 +902,11 @@
           "Bilde" : "bilder2x/Corsair RM550x.png",
           "forPris" : 2490,
           "Pris" : 1990,
+<<<<<<< HEAD
           "Prosent" : 12
+=======
+          "Prosent" : 20
+>>>>>>> e88f8cab3659fadec750d12fd2f25cbe943b6d6d
         },
         "Salg12" : {
           "Navn" : "LC Power LC1800",

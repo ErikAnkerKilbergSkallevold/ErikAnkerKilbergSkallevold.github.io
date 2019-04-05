@@ -45,7 +45,7 @@ main {
     justify-self: start;
 }
 .me span {
-    background-color: blueviolet;
+    background-color: #e52437;
     color: white;
     grid-row-start: 1;
 }
