@@ -900,7 +900,9 @@
           "Åttiplus" : "80 PLUS Gold",
           "Modulær" : "Modulær",
           "Bilde" : "bilder2x/Corsair RM550x.png",
-          "forPris" : 2490
+          "forPris" : 2490,
+          "Pris" : 1990,
+          "Prosent" : 12
         },
         "Salg12" : {
           "Navn" : "LC Power LC1800",
