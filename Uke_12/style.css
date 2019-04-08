@@ -275,7 +275,7 @@ h1{
 }
 .gridperma{
   grid-column: span 1;
-  grid-row: span 6;
+  grid-row: span 7;
   font-size: 40px;
   font-weight: 10;
   margin-right: 300px;
@@ -288,7 +288,7 @@ h1{
 
 .gridperma:hover{
   grid-column: span 1.5;
-  grid-row: span 6;
+  grid-row: span 7;
   transition: 0.5s;
   border: 2px solid #e52437;
 }
