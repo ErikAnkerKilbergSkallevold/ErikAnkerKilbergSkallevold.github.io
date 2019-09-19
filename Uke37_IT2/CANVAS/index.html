@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas id="minCanvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("minCanvas");
+      var ctx = canvas.getContext("2d");
+      var side = 150;
+      var xPosisjon = 0;
+      var yPosisjon = 0;
+      while (side>0) {
+        ctx.rect(xPosisjon, yPosisjon, side, side);
+        ctx.stroke();
+        xPosisjon = yPosisjon + 10;
+        yPosisjon = yPosisjon + 10;
+        side = side - 20;
+      }
+    </script>
+  </body>
+</html>
