@@ -28,7 +28,33 @@ class ET(){
 
 */
 
+let player1;
 
+class Player{
+  constructor(x, y){
+    this.xPos = x;
+    this.yPos = y;
+  }
+  draw(){
+    fill(255, 0, 0);
+    rect(this.xPos, this.yPos, 100, 100);
+  }
+  move(){
+    if (keyCode === LEFT_ARROW) {
+    this.xPos-=1;
+    }
+    if (keyCode === RIGHT_ARROW) {
+    this.xPos+=1;
+    }
+    if (keyCode === DOWN_ARROW) {
+    this.yPos+=1;
+    }
+    if (keyCode === UP_ARROW) {
+    this.yPos-=1;
+    }
+
+  }
+}
 
 
 function make2DArray(cols, rows){
@@ -66,7 +92,7 @@ let resolution = 54;
 
 
 function new_map(){
-  
+
 }
 
 function cave(){
@@ -77,8 +103,9 @@ function setup() {
   createCanvas(1080,1080);
   cols = width / resolution;
   rows = height / resolution;
-
+  player1 = new Player(500, 500);
    grid = make2DArray(cols, rows)
+
 }
 function draw() {
   background(21, 232, 21);
@@ -93,4 +120,6 @@ function draw() {
         }
       }
     }
+    player1.move();
+    player1.draw();
 }
