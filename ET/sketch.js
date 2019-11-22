@@ -28,83 +28,95 @@ class ET(){
 
 */
 
-let player1;
+let grid;
 
 class Player{
   constructor(x, y){
     this.xPos = x;
     this.yPos = y;
+    this.gridXPos = Math.floor(this.xPos/resolution);
+    this.gridYPos = Math.floor(this.yPos/resolution);
+
   }
   draw(){
     fill(255, 0, 0);
-    rect(this.xPos, this.yPos, 100, 100);
+    rect(this.xPos, this.yPos, 54, 54);
   }
   move(){
     if (keyCode === LEFT_ARROW) {
-    this.xPos-=1;
+    this.xPos-=2;
     }
     if (keyCode === RIGHT_ARROW) {
-    this.xPos+=1;
+    this.xPos+=2;
     }
     if (keyCode === DOWN_ARROW) {
-    this.yPos+=1;
+    this.yPos+=2;
     }
     if (keyCode === UP_ARROW) {
-    this.yPos-=1;
+    this.yPos-=2;
     }
-
+    this.gridXPos = floor(this.xPos/resolution);
+    this.gridYPos = floor(this.yPos/resolution);
+    console.log(this.gridXPos);
+    console.log(this.gridYPos);
+    if (grid[this.gridYPos][this.gridXPos]==1){
+      console.log("Collision");
+    }
+    if (grid[this.gridYPos][this.gridXPos]==9){
+      let r = data.maps.map2[0];
+    }
   }
 }
 
 
-function make2DArray(cols, rows){
-
-  let arr =[
-
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
-  [0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0],
-  [0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
-  [0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
-  [0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
-  [0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0],
-  [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
-  [0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0],
-  [0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
-  [0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
-  [0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0],
-  [0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0],
-  [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]];
-  return arr;
+/*let data;
+function preload(){
+  data = loadJSON("maps.json");
 }
 
+function make2DArray(){
+  console.log(data.maps);
 
-let grid;
+  let r = data.maps["map1"];
+
+  console.log(r);
+  return r;
+}*/
+
+let data;
+function preload(){
+  data = loadJSON("maps.json");
+}
+
+function make2DArray(rows, cols){
+
+
+  console.log(data.maps);
+
+  let r = data.maps.map1[0];
+
+  console.log(r);
+  return r;
+
+}
+
 let cols;
 let rows;
 let resolution = 54;
 
 
-function new_map(){
 
-}
 
-function cave(){
 
-}
+
+let player1 = new Player(500, 500);
 
 function setup() {
   createCanvas(1080,1080);
   cols = width / resolution;
   rows = height / resolution;
-  player1 = new Player(500, 500);
-   grid = make2DArray(cols, rows)
+
+  grid = make2DArray(rows, cols)
 
 }
 function draw() {
@@ -122,4 +134,6 @@ function draw() {
     }
     player1.move();
     player1.draw();
+
+
 }
