@@ -16,7 +16,7 @@ function AI(){
   }
 
   this.update = function(){ //Jeg må en update funksjon får å spilleren til å oppdatere seg på brettet.
-    if (ball.pos.y<this.pos.y-this.h/2) {
+  /*  if (ball.pos.y<this.pos.y-this.h/2) {
       this.acc.y-=this.spd;
     }else {
       this.acc.y+=this.spd;
@@ -26,9 +26,9 @@ function AI(){
     this.acc.y = constrain(this.acc.y, -this.maxSpd, this.maxSpd);
 
     this.pos.add(this.acc);
-    this.pos.y = constrain(this.pos.y, 0, height-this.h);
+    this.pos.y = constrain(this.pos.y, 0, height-this.h); */
 
-    //this.pos.y = ball.pos.y-80;
+    this.pos.y = ball.pos.y-80;
 
   }
 }

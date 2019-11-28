@@ -1,4 +1,4 @@
-var player, ball, ai; //Definerer player for å kunne ha spilleren. og ballen
+var player, ball, ai, button; //Definerer player for å kunne ha spilleren. og ballen
 
 var playerScore = 0;
 var AIScore = 0;
@@ -34,6 +34,7 @@ function draw() {
 
   ai.show();
   ai.update();
+
 
   player.update(); //Jeg må oppdatere spilleren, eller så kan vi ikke se at den beveger seg
   player.show(); //Jeg må tegne spilleren, eller så kan vi ikke se den i det hele tatt.

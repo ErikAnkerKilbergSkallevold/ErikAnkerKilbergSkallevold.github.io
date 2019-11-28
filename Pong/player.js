@@ -1,6 +1,6 @@
 function Player() {
   this.w = 15; //Bredden på player
-  this.h = 80; //Høyden på player
+  this.h = 160; //Høyden på player
 
   this.pos = createVector(this.w*2, height/2-this.h/2); //Paddle er i midten av skjermen og er 2 bredder fra kanten av skjermen.
   this.acc = createVector(0, 0); //Akselarsjonen på Player
