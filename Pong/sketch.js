@@ -6,6 +6,8 @@ var dots = []; //Dottene i midten ligger i et array.
 var dSize = 10; //Størrelsen på dottene.
 var txtSize = 30
 
+console.log(dots);
+
 function setup() {
   createCanvas(800, 500); //Lager et tegneområdet på 800px * 500px.
 
@@ -21,7 +23,7 @@ function draw() {
   background(0); //Jeg vil ha en sort bakgrunn
 
   noStroke(); //Dottene skal ikke ha noe linje
-  fill(225, 100); //Dottene skal ha random farger, for å spice det opp
+  fill(255, 100); //Dottene skal ha random farger, for å spice det opp
   drawSquares(); //Kaller på funksjonen for å tegne dottene
 
 
@@ -36,6 +38,7 @@ function draw() {
   player.update(); //Jeg må oppdatere spilleren, eller så kan vi ikke se at den beveger seg
   player.show(); //Jeg må tegne spilleren, eller så kan vi ikke se den i det hele tatt.
 
+  ball.scores();
 
 
 
@@ -47,12 +50,12 @@ function drawScores(){
   let x2 = width*3/4; //Tegner scoren på 3de 4-del
   let y = txtSize*1.5; //Tegn den 1.5 gang større enn pos.
 
-  noStroke();
-  fill(255);
-  textAlign(CENTER);
-  textSize(txtSize);
-  text(playerScore, x1, y);
-  text(AIScore, x2, y);
+  noStroke(); //Jeg vil ikke ha noen linje rundt teksten på score
+  fill(255); //Jeg vil at scoren skal være hvit
+  textAlign(CENTER); //Jeg vil at teksten skal være sentrert
+  textSize(txtSize); //Må ikke bruke textSize, siden det facker med argumenter, og values
+  text(playerScore, x1, y); //Teksten til player skal være på x1 og på y
+  text(AIScore, x2, y); //Teksten til AI skal være på x2 og på y.
 }
 
 function drawSquares(){ //Denne lager dottene i midten av skjermen

@@ -1,3 +1,5 @@
+let bouncesound
+
 function Ball(){
   this.pos = createVector(width/2, height/2);
   this.r = 10;
@@ -12,7 +14,7 @@ do{
 
 this.show = function(){
   noStroke();
-  fill(255);
+  fill(Math.random()*255, Math.random()*255, Math.random()*255);
   ellipse(this.pos.x, this.pos.y, this.r*2); //Ganger to for diamteren, en value gjør det til en sirkel
   }
 
@@ -31,7 +33,7 @@ this.show = function(){
 
     for(let i = 0; i < player.h; i++){
       d1 = dist(this.pos.x, this.pos.y, ai.pos.x, ai.pos.y+i);
-      d2 = dist(this.pos.x, this.pos.y, player.pos.x, player.pos.y+i);
+      d2 = dist(this.pos.x, this.pos.y, player.pos.x+player.w, player.pos.y+i);
 
       if(d1<=this.r){
         collided = true;
@@ -49,6 +51,7 @@ this.show = function(){
       this.collObj = obj;
 
 
+
       this.acc.add(createVector(0.5, obj.acc.y*0.25)) //Øker ballen sin hastighet på x aksen med 0.5 per kolliosjon
       this.acc.x *=-1;
       this.acc.x = constrain(this.acc.x, -this.maxSpd.x, this.maxSpd.x); //
@@ -59,5 +62,26 @@ this.show = function(){
       if(d>100){this.collision = false;}
       this.collision = false;
     }
+  }
+
+  this.scores = function(){
+    if(this.pos.x<-this.r){
+      AIScore++;
+      this.res();
+    }else if (this.pos.x>width+this.r) {
+      playerScore++;
+      this.res();
+    }
+  }
+  this.res = function(){
+    ai.pos = createVector(width-ai.w*3, height/2-ai.h/2);
+    player.pos = createVector(player.w*2, height/2-player.h/2);
+
+    this.pos = createVector(width/2, height/2);
+
+    do{
+      this.acc = p5.Vector.random2D();
+      this.acc.setMag(random(4, 10));
+    }while (abs(this.acc.x)<3 || abs(this.acc.y)<3);
   }
 }

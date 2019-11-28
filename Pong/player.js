@@ -9,7 +9,7 @@ function Player() {
 
   this.show = function(){
     noStroke(); //Jeg vil ikke ha noe kant på paddlen min
-    fill(255); //Jeg vil at den skal ha random farger
+    fill(247, 215, 7); //Jeg vil at den skal ha random farger
     rect(this.pos.x, this.pos.y, this.w, this.h); //X, y og størrelsen til paddlen
   }
 
