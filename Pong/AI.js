@@ -18,10 +18,14 @@ function AI(){
     let d2 = dist(ball.pos.x, ball.pos.y, this.pos.x, this.pos.y + this.h);
     let d = (d1+d2)/2;*/
 
-    let d = dist(ball.pos.x, ball.pos.y, this.pos.x, floor((this.pos.y + this.h) / 2));
+    /*this.pos.y = ball.pos.y - this.h / 2; //Denne AIEN funker best, men den bare følger y pos til ballen */
+
+    let d = dist(ball.pos.x, ball.pos.y, this.pos.x, this.pos.y + floor(this.h / 2));
 
     this.pos.add(this.acc); //Legger til acceleration
     this.pos.y = constrain(this.pos.y, 0, height-this.h); //Constrainer y
+
+    console.log(d)
 
     if(d<450){ //DENNE AI KODEN ER 110% WHACK, DEN ER VELDIG DÅRLIG!!!
       if(ball.pos.y<this.pos.y-this.h/2){
@@ -33,7 +37,7 @@ function AI(){
       this.acc.y = constrain(this.acc.y, -this.maxSpd, this.maxSpd);
 
     }else {
-      this.acc.y+=random(-this.spd*0.9, this.spd); //AIen har bare 90% av speeden
+      this.acc.y+=random(-this.spd*0.9, this.spd);
     }
   }
 }

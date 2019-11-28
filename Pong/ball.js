@@ -7,7 +7,7 @@ function Ball(){
 
 do{
   this.acc = p5.Vector.random2D(); //Lager en vektor mellom -1 og 1.
-  this.acc.setMag(random(4, 6)); //Endrer magnituden på vectoren.
+  this.acc.setMag(random(4, 10)); //Endrer magnituden på vectoren.
 }while (abs(this.acc.x)<3 || abs(this.acc.y)<3); //Akselarsjonen på ballen, kommer til å være opprettholdt gjennom hele spillet
 
 this.show = function(){
