@@ -1,4 +1,4 @@
-let bouncesound
+let bouncesound;
 
 function Ball(){
   this.pos = createVector(width/2, height/2);
@@ -47,8 +47,11 @@ this.show = function(){
     }
 
     if(collided && !this.collision){
+
+
       this.collision = true;
       this.collObj = obj;
+
 
 
 

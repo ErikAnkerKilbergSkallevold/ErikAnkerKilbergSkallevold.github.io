@@ -9,7 +9,7 @@ var txtSize = 30
 console.log(dots);
 
 function setup() {
-  createCanvas(800, 500); //Lager et tegneområdet på 800px * 500px.
+  createCanvas(windowWidth,windowHeight-60); //Lager et tegneområdet på 800px * 500px.
 
   player = new Player; //Player blir definert som ny Player
   ball = new Ball();
