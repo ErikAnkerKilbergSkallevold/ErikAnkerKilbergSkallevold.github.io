@@ -29,17 +29,17 @@ function draw() {
 
 
   ball.edges();
-  ball.update();
-  ball.show();
+  ball.update(); //Ballen opppdateres før den vises
+  ball.show(); // Ballen vises etter at den oppdateres, og får AI og player
 
-  ai.show();
-  ai.update();
+  ai.show(); // Vis AI
+  ai.update(); //Oppdater AI
 
 
   player.update(); //Jeg må oppdatere spilleren, eller så kan vi ikke se at den beveger seg
   player.show(); //Jeg må tegne spilleren, eller så kan vi ikke se den i det hele tatt.
 
-  ball.scores();
+  ball.scores(); //Scoren vises til slutt, siden den ikke er viktig
 
 
 

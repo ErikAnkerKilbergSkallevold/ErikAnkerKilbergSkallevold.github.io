@@ -28,7 +28,7 @@ function AI(){
     this.pos.add(this.acc);
     this.pos.y = constrain(this.pos.y, 0, height-this.h); */
 
-    this.pos.y = ball.pos.y-80;
+    this.pos.y = ball.pos.y-80; //Paddle følger y-aksen på ballen, for å gjøre det umulig å vinne
 
   }
 }

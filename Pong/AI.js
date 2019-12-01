@@ -15,8 +15,8 @@ function AI(){
     rect(this.pos.x, this.pos.y, this.w, this.h); //X, y og størrelsen til paddlen
   }
 
-  this.update = function(){ //Jeg må en update funksjon får å spilleren til å oppdatere seg på brettet.
-    if (ball.pos.y<this.pos.y-this.h/2) {
+  this.update = function(){ //Jeg må en update funksjon får å AIen til å oppdatere seg på brettet.
+    if (ball.pos.y<this.pos.y-this.h/2) { //Deler høyden på to for å finne midten av paddlen
       this.acc.y-=this.spd;
     }else {
       this.acc.y+=this.spd;
