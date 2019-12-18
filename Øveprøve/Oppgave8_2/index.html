@@ -6,6 +6,10 @@
   </head>
   <body>
 
+    <button onclick="vismdg" name="button">Miljø Partiet de Grønne</button>
+    <button onclick="vissp" name="button">Senterpartiet</button>
+
+
     <p id="navn"></p>
     <br>
     <p id="antall"></p>
@@ -13,22 +17,41 @@
     <p id="slagord"></p>
     <br>
     <img src="" id="bilde" alt="">
-    <button type="button" onclick="bildeknapp()" name="button">Neste bilde</button>
+    <button type="button" onclick="bildeknapp()" name="button">Forrige bilde</button>
+    <button type="button" onclick="bildeknapp2()" name="button">Neste bilde</button>
 
     <script type="text/javascript">
-      var sp = {name: "Senterpartiet", storting: 19, slagord: "Sammen er vi sterke!", bilde: "bilder/sp.jfif", bilde2:"bilder/sp logo.jpg"};
 
-      document.getElementById("navn").innerHTML = sp.name;
-      document.getElementById("antall").innerHTML = sp.storting;
-      document.getElementById("slagord").innerHTML = sp.slagord;
 
+    var spbilder = ["bilder/sp.jfif", "bilder/sp logo.jpg"];
+    var sp = {name: "Senterpartiet", storting: 19, slagord: "Sammen er vi sterke!", bilde: "bilder/sp.jfif", bilde2:"bilder/sp logo.jpg"};
+
+
+
+    document.getElementById("navn").innerHTML = sp.name;
+    document.getElementById("antall").innerHTML = sp.storting;
+    document.getElementById("slagord").innerHTML = sp.slagord;
+
+    document.getElementById("bilde").src = sp.bilde;
+
+    function bildeknapp(){
+      document.getElementById("bilde").src = sp.bilde;
+    }
+    function bildeknapp2(){
       document.getElementById("bilde").src = sp.bilde2;
+    }
 
-      function bildeknapp(){
-        for (var i = 0; i < 1; i++) {
-          document.getElementById("bilde").src = sp.bilde;
-        }
-      }
+    function bilder(){
+      
+    }
+
+    function vissp(){
+
+    }
+    function vismdg(){
+
+    }
+
 
     </script>
   </body>
