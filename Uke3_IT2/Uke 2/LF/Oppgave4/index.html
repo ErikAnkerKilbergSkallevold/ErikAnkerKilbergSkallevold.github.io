@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .app{
+      width: 500px;
+      margin: auto;
+    }
+      #divSvar{
+        margin-top: 15px;
+        padding: 10px;
+        border: solid black;
+        min-height: 3rem;
+      }
+      button{
+        background-color: lightgrey;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h1>Kalorikalkulator</h1>
+      <select id="selAktivitet">
+        <option>Velg aktivitet</option>
+      </select>
+      <div>
+        <p>Velg intensitet:</p>
+        <div id="divIntensiteter"></div>
+      </div>
+      <div>
+        <p>Oppgi varihet på treningen i minutter:</p>
+        <input id="inpVarighet" type="number">
+      </div>
+      <div>
+        <button id="btnBeregn" type="button" name="button">Beregn kaloriforbruk</button>
+      </div>
+      <div id="divSvar">
+        Svar
+      </div>
+    </div>
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

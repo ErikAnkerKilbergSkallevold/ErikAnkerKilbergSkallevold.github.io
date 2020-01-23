@@ -1,0 +1,36 @@
+<html>
+<head>
+    <style>
+        #bilderamme {
+            width: 475px;
+            height: 345px;
+            border: 1px solid dimgray;
+            overflow: hidden;
+            margin: 50px auto; /* Midtstiller */
+        }
+        #imgPing {
+            cursor: zoom-in; /* Forstørrelsesglass */
+            width: 475px; /* Bildet er opprinnelig 1900 piksler bredt */
+        }
+    </style>
+    <div id="bilderamme">
+        <img id="imgPing" src="Bilder/pingvin.jpg">
+    </div>
+</head>
+<body>
+    <script>
+        var imgPing = document.getElementById("imgPing");
+        var bilderamme = document.getElementById("bilderamme");
+        imgPing.onmousemove = function(evt) { //Setter negativ marg avhengig av hvor markøren er
+            imgPing.style.width = "1900px";
+            imgPing.style.marginLeft = 3 * (-evt.clientX + bilderamme.offsetLeft) + "px";//offsetTop og offsetLeft er avstanden fra nettleserkanten til div-elementet
+            imgPing.style.marginTop = 3 * (-evt.clientY + bilderamme.offsetTop) + "px";
+        };
+        imgPing.onmouseout = function() { //Funksjonen zoomer ut
+            imgPing.style.width = "475px"; //Zoomer ut
+            imgPing.style.marginLeft = 0; //Setter margen tilbake til 0
+            imgPing.style.marginTop = 0; //Setter margen tilbake til 0. Når vi ikke lenger skal zoome
+        };
+    </script>
+</body>
+</html>

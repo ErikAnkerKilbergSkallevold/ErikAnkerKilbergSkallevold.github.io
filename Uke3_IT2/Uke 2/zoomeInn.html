@@ -1,0 +1,33 @@
+<html>
+head>
+    <style>
+        #bilderamme {
+            width: 475px;
+            height: 345px;
+            border: 1px solid dimgray;
+            overflow: hidden;
+            margin: 50px auto; /* Midtstiller */
+        }
+        #imgPing {
+            cursor: zoom-in; /* Forstørrelsesglass */
+            width: 475px; /* Bildet er opprinnelig 1900 piksler bredt */
+        }
+    </style>
+</head>
+<body>
+    <div id="bilderamme">
+<img id="imgPing" src="Bilder/pingvin.jpg">
+    </div>
+
+    <script>
+        var imgPing = document.getElementById("imgPing");
+        var bilderamme = document.getElementById("bilderamme");
+        imgPing.onmouseover = function() {
+            imgPing.style.width = "1900px"; //Zoomer inn
+        };
+        imgPing.onmouseout = function() {
+            imgPing.style.width = "475px"; //Zoomer ut
+        };
+    </script>
+</body>
+</html>

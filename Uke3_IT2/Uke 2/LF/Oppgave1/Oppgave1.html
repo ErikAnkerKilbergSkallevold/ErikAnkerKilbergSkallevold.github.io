@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script>
+var d1=50.5;
+var d2=70; var d3=23; var d4=90;
+var array=[d1,d2,d3,d4];
+var lengde=array.length;var sum=0;
+for (var i=0;i<lengde;i++){
+  sum+=array[i];
+}
+console.log(sum)
+var string="";
+for (var i=0;i<lengde;i++){
+  string+=array[i]+" ";
+}
+console.log(string);
+
+array.splice(2,1,93);// eller:
+for (var i=0;i<lengde;i++){
+  if (array[i]===23){
+    array[i]=93
+  }
+}
+  console.log(array);
+</script>
+  </body>
+</html>

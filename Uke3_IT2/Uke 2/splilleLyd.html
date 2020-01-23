@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<audio id="lyd" src="Lyder/gitar.mp3" ></audio>
+
+<button type="button" id="btn" name="button">Spill</button>
+<script type="text/javascript">
+var btn=document.getElementById("btn");
+var lyd=document.getElementById("lyd");
+
+btn.onclick=function(){
+  if(lyd.paused){
+    lyd.play();
+    btn.innerHTML="Pause";
+  }else {
+    lyd.pause();
+      btn.innerHTML="Spill";
+  }
+}
+
+</script>
+
+  </body>
+</html>

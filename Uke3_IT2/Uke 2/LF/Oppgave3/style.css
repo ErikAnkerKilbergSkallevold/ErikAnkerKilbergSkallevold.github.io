@@ -1,0 +1,66 @@
+.register{
+
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid black;
+}
+.visning {
+
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid black;
+}
+.innpakning {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+ display:  inline-grid;
+  grid-template-columns: 50% 50%
+}
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  /*plassering*/
+  display: block; /*elementene havner på egne rader*/
+  margin-top: 3px;/*litt mellomrom til elementet ovenfor*/
+  margin-bottom: 10px; /*og nedenfor*/
+  /*utseende*/
+  font-family: inherit;/*arver nettsidens skrifttype*/
+  color: #666666; /*mørkgrå*/
+  border: 1px solid rgba(o,o,o,0.1); /*lys grå kantlinje*/
+  border-radius: 4px; /*avrundet kantlinje*/
+  padding: 5px; /*luft inni tekstboksene*/
+  box-shadow: 0 1px 5px rgba(0,0,0,0.7); /*skygge på tekstboksene*/
+  box-sizing: border-box; /*teller med kantlinjen i bredden*/
+}
+input[type="text"]{
+min-width: 130px; /*aldri smalere enn 130px*/
+width: 100%;
+}
+input[type="number"],input[type="date"], select{
+  min-width: 130px; /*aldri smalere enn 130px*/
+  width: 30%;
+}
+
+textarea {
+  min-width: 130px; /*aldri smalere enn 130px*/
+  width: 100%;
+  height: 60px;
+}
+button {
+  padding: 10px; /*luft inni knappen*/
+  color: white;
+  text-shadow: 0 -1px 1px #335166;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  background: linear-gradient(rgba(255,255,255,0.2),transparent);
+  background-color: #5588AA;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  outline: none;
+  cursor: pointer; /*gjør om musepekeren til en hånd*/
+}
+button:active {
+  transform: translate(1px, 1px); /* 1 px til høyre og 1 px ned*/
+}

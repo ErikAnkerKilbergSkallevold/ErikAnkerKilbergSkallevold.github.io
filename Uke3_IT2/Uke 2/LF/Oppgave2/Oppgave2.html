@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <style >
+    #boks{
+      display:  flex;
+      margin: auto;/*plasserer div i sentrum av dokumentet*/
+      width: 600px;
+      height: 300px;
+      flex-direction: row; /*stående stolper, alternativt column*/
+      align-items: flex-end; /*angir hvor stolpene starter*/
+    }
+
+    .rod {
+      background-color: red;
+      margin: 5px;
+      flex-grow: 1; /*hvor stor plass stolpene skal ha i bredden*/
+      text-align: center;
+      color: white;
+      font-family: arial, verdana, sans-serif;
+    }
+  </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+Forbruk:<br>
+<input type="number" id="forbruk" name="" value=""><br>
+Tank:<br>
+<input type="number" id="tank" name="" value=""><br>
+<button type="button" id="btn" name="button">Beregn</button>
+<div id="resultat">
+</div>
+<label >Bilmerke</label>
+<select class="" name="Bilmerke" id="merke" >
+  <option value=0>Fiat 500</option>
+  <option value=1>Porsche 911</option>
+  <option value=2>Toyota Prius</option>
+</select><br>
+<br>
+<button type="button" id="btnM" name="button">Vis info</button>
+<div id="info">
+</div>
+<div id="boks"></div>
+<script>
+var forbrukEl=document.getElementById("forbruk");
+var tankEl=document.getElementById("tank");
+var btnEl=document.getElementById("btn");
+var resultatEl=document.getElementById("resultat");
+var merkeEl=document.getElementById("merke");
+var btnMEl=document.getElementById("btnM");
+var infoEl=document.getElementById("info");
+var svar=0;  var forbrukVis=0;var merke="";
+var tankVis=0; var string="";
+var fiat={bilmerke: "Fiat 500", tank: 35, forbruk: 0.51};
+var porsche={bilmerke: "Porsche 911", tank: 64, forbruk: 0.95};
+var toyota={bilmerke: "Toyota Prius", tank: 45, forbruk: 0.39};
+var array=[fiat,porsche,toyota];
+var i =0;
+btnEl.onclick=Beregn;
+btnMEl.onclick=Vis;
+
+function Vis(){
+ i=merkeEl.value;
+ visBil(i);
+}
+function visBil(i){
+    forbrukVis=array[i].forbruk;
+    tankVis=array[i].tank;merke=array[i].bilmerke;
+    string="Bilmerke: "+ merke+", forbruk: "+forbrukVis+" l/mil, størrelse på tanken: "+ tankVis+" liter, kjørelengde: "+ (tankVis/forbrukVis).toFixed(2)+" mil."
+    infoEl.innerHTML=string;
+  }
+
+function Beregn(){
+  var forbruk=Number(forbrukEl.value);
+  var tank=Number(tankEl.value);
+  svar=tank/forbruk;
+  resultatEl.innerHTML="Du kan kjøre "+svar.toFixed(2)+ " mil på en tank";
+}
+
+var boks=document.getElementById("boks");
+var kjorelengde=[fiat.tank/fiat.forbruk,porsche.tank/porsche.forbruk, toyota.tank/toyota.forbruk];
+function finnMaks(){
+  var maks=-Infinity;
+  for (var lengde of kjorelengde){
+    if(lengde>maks){
+      maks=lengde;
+    }
+  }
+  return maks;
+}
+tegnStolper();
+var stolper=document.querySelectorAll("p")
+for (var i =0; i<stolper.length; i++){//
+  stolper[i].onclick=VisInfo;
+}
+
+function VisInfo(e){
+  if(e.target.id==="fiat"){
+    visBil(0);
+}else   if(e.target.id==="porsche"){
+    visBil(1);
+  } else if(e.target.id==="toyota"){
+    visBil(2);
+      }
+}
+
+function tegnStolper(){
+  var maks=finnMaks(); var arrayStolper=[];
+  for(var lengde of kjorelengde){
+    var prosent=lengde/maks*100;
+    arrayStolper.push(prosent);
+  }
+    boks.innerHTML+=`<p class="rod" id="fiat" style="height:${arrayStolper[0]}%">Fiat</p>`;
+    boks.innerHTML+=`<p class="rod" id="porsche" style="height:${arrayStolper[1]}%">Porsche</p>`;
+    boks.innerHTML+=`<p class="rod" id="toyota" style="height:${arrayStolper[2]}%">Toyota</p>`;
+}
+</script>
+  </body>
+</html>

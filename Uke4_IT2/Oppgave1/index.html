@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dikt og teksting</title>
+  </head>
+  <body>
+    <video id="minFilm" src="dikt.mp4" width="640px" height="400px"  poster="pingvin.jpg">
+      <track default src="teksting.vtt" srclang="no" label="Norsk">
+    </video>
+    <br>
+    <span><button type="button" id="btnPlay" name="button">Play</button></span>
+    <span><button type="button" id="btnPause" name="button">Pause</button></span>
+
+
+
+    <script type="text/javascript">
+      const minFilm=document.querySelector("#minFilm");
+      const btnPlay=document.querySelector("#btnPlay");
+      const btnPause=document.querySelector("#btnPause");
+      btnPlay.onclick=SpillVideo;
+      btnPause.onclick=PauseVideo;
+      function SpillVideo(){
+        minFilm.play();
+      }
+      function PauseVideo(){
+        minFilm.pause();
+      }
+    </script>
+
+  </body>
+</html>

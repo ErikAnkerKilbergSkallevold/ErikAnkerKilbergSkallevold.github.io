@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><link rel="stylesheet" href="style.css">
+      <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<div class="innpakning">
+
+<div class="register"><h1></h1>
+<form id="reg" method="post">
+  <input type="radio" name="a" checked id="bryllup">Bryllup
+  <input type="radio"  name="a" id="konfirmasjon">Konfirmasjon
+  <input type="radio" name="a"   id="barnedaap">Barnedåp
+  <hr>
+<label for="dag">Dag</label>
+<input  type="text"  name="" value="" id="dag" required/>
+<label for="dato">Dato</label>
+<input type="date" id="dato" name="" value="" required>
+<label for="klokkeslett">Klokkeslett</label>
+<input type="time" id="klokke" required>
+<label for="sted">Sted</label>
+<input  type="text"  name="" value="" id="sted" required>
+
+<label >Tekst</label>
+<textarea id="tekst" placeholder="Skriv en invitasjon" required></textarea>
+<button type="submit" name="button" id="btn">Lag en invitasjon</button>
+</form>
+</div>
+<div class="visning">
+  <h1 id="overskrift">Invitasjon til bryllupsfest</h1>
+<p id="invitasjon"></p>
+<img id="bilde" src="" alt="">
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+  </body>
+</html>

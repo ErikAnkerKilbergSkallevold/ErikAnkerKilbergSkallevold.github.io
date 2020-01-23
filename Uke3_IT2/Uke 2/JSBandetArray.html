@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>The Band</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: darkred;
+            color: aliceblue;
+            font-family: "Roboto";
+        }
+
+        #bandet {
+            text-align: center;
+        }
+
+        #bandet > img {
+            height: 180px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #info {
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="bandet"></div>
+<div id="divLyd"></div>
+<article id="info">
+</article>
+<script>
+var divBandet = document.getElementById("bandet");
+var artikkel = document.getElementById("info");
+var divLyd=document.getElementById("divLyd")
+const band=[
+  {navn: 'Trommer', idInstrument: 0, bildeBlek: 'Bilder/trommer_blek.png', bildeSvart: 'Bilder/trommer_sort.png', lyd:'Lyder/trommer.mp3', tekst: 'Trommen holder takten!' },
+  {navn: 'Bass', idInstrument: 1, bildeBlek: 'Bilder/bass_blek.png', bildeSvart: 'Bilder/bass_sort.png', lyd:'Lyder/bass.mp3', tekst: 'Bassen gir takt, tone og rytme.' },
+  {navn: 'Trompet', idInstrument: 2, bildeBlek: 'Bilder/orgel_blek.png', bildeSvart: 'Bilder/orgel_sort.png', lyd:'Lyder/orgel.mp3', tekst: 'Orgeltonene triller!' },
+  {navn: 'Piano', idInstrument: 3, bildeBlek: 'Bilder/piano_blek.png', bildeSvart: 'Bilder/piano_sort.png', lyd:'Lyder/piano.mp3', tekst: 'Her får du høre pianostemmen!' },
+  {navn: 'Gitar', idInstrument: 4, bildeBlek: 'Bilder/gitar_blek.png', bildeSvart: 'Bilder/gitar_sort.png', lyd:'Lyder/gitar.mp3', tekst: 'Gitaren låter bra!' }
+];
+for (const instrument of band){
+divLyd.innerHTML+=`
+  <audio src="${instrument.lyd}" autoplay loop></audio>
+  `;
+}
+for (const instrument of band){
+  divBandet.innerHTML+=`
+  <img id="${instrument.idInstrument}" onclick="VisInfo" src="${instrument.bildeBlek}">
+  `;
+}
+
+// Finne alle audio-elementer og img e-elementer
+var lyder = document.querySelectorAll("audio");
+var bilder = document.querySelectorAll("img");
+let i;
+//console.log(lyder);console.log(bilder);console.log(band)
+for(var bilde of bilder){
+  bilde.onclick=SpillLyd;
+}
+
+for(var bilde of bilder){
+  bilde.onmouseover= function(e){
+    var i =e.target.id;
+    artikkel.innerHTML = `<h1>${band[i].navn}</h1>
+                      <p>${band[i].tekst}</p>`;
+  }
+}
+for(var lyd of lyder){
+  lyd.volume=0;
+}
+
+function SpillLyd(evt){
+var i=evt.target.id;
+//Vis(i);
+lyder[i].currentTime=lyder[i].currentTime;
+if (lyder[i].volume === 1) {
+    lyder[i].volume = 0;
+    bilder[i].src = band[i].bildeBlek;
+} else {
+    lyder[i].volume = 1;
+    bilder[i].src= band[i].bildeSvart;
+}
+}
+
+</script>
+
+</body>
+</html>
