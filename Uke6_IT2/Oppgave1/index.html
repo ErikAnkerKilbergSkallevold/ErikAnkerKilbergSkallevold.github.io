@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bruh</title>
+    <style media="screen">
+      body{
+        font-family: sans-serif;
+        color: darkslateblue;
+      }
+      @keyframes kjør{
+        0%{left: 100px;}
+        25%{left: 400px;}
+        50%{left: 600px;}
+        75%{left: 400px;}
+        100%{left: 100px;}
+      }
+      #kjør{
+        position: absolute;
+        width: 90px;
+        height: auto;
+        left: 10px;
+        animation: kjør 10s infinite;
+      }
+      img{
+        width:300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kjør">
+      <div><img src="pingvin.jpg" alt=""></div>
+      <div><p>Hei på deg</p> </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+    var btnLyd = document.getElementById("btnLyd");
+
+    musikk = true;
+    btnLyd.onclick = function(){
+        if(musikk){
+            lyd.volume = 0;//lyd av
+            musikk = false;
+        }
+        else{
+            lyd.volume = 1;//lyd på
+            musikk = true;
+        }
+    }
+    </script>
+  </body>
+</html>

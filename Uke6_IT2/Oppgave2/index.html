@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Punjabi free sex movie 144p no ads, many camels</title>
+    <style media="screen">
+      @keyframes subaru{
+        0%{left: 10px; transform: scale(2);}
+        20%{left: 370px; transform: scale(2);}
+        40%{left: 740px; transform: scale(2);}
+        60%{left: 740px;  -webkit-transform: scaleX(-2); transform: scaleX(-2);}
+        80%{left: 370px;  -webkit-transform: scaleX(-2); transform: scaleX(-2);}
+        100%{left: 10px;  -webkit-transform: scaleX(-2); transform: scaleX(-2);}
+      }
+      @keyframes sol{
+        0%{transform:rotate(0deg) scale(2);}
+        30%{transform:rotate(720deg) scale(2.5);}
+        80%{transform:rotate(1440deg) scale(1.5);}
+        100%{transform:rotate(720deg) scale(1);}
+      }
+      @keyframes p{
+        0%{color: blue; transform: scale(2);}
+        20%{color: red;transform: scale(1);}
+        40%{color: yellow; transform: scale(2);}
+        60%{color: purple; transform: scale(1);}
+        80%{color: cyan; transform: scale(2);}
+        100%{color:green;transform: scale(1);}
+      }
+      @keyframes flyttFly{
+         0%{
+             left:-200px;
+             top: 200px;
+             width: 150px;
+             height: 50px;
+          }
+         100%{
+             left:1200px;
+             top: -100px;
+             width: 450px;
+             height: 150px;
+          }
+     }
+
+     @keyframes shrek{
+       0%{ -webkit-transform: scale(-1.1); transform: scale(-1.1);}
+       50%{  -webkit-transform: scale(1); transform: scale(1);}
+       100%{ -webkit-transform: scale(-1.1); transform: scale(-1.1);}
+     }
+
+     #fly{
+         position: absolute;
+         left: -200px;
+         top:200px;
+         animation: flyttFly 6s infinite;
+         animation-timing-function: linear;
+     }
+     #liteFly{
+         position: absolute;
+         top: 220px;
+         left: 40px;
+         font-size: 11px;
+         cursor: pointer;
+     }
+      #ramme{
+        overflow: hidden;
+        background-image: url(highway.jpg);
+        width:1920px;
+        height:1080px;
+      }
+      #bilbilde{
+        position: absolute;
+        left: 300px;
+        top: 650px;
+        animation: subaru 5s infinite;
+        overflow: hidden;
+      }
+      #bilder{
+        overflow: hidden;
+      }
+      #teletubbie{
+        position: absolute;
+        left: 1200px;
+        top: 100px;
+        animation: sol 2s infinite;
+      }
+      #btn{
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
+      #tekst{
+        position: absolute;
+        top: 400px;
+        left: 400px;
+      }
+      p{
+        font-size: 50pt;
+        font-family: "Comic Sans MS", "Comic Sans", cursive, bold;
+        animation: p 1s infinite;
+      }
+      #shrekbilde{
+        animation: shrek 1s infinite;
+        position: absolute;
+        left: 200px;
+        top: 0px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ramme">
+      <div id="bilder">
+        <div id="bilbilde">
+           <div><img src="Subaru.png" alt=""> </div>
+        </div>
+        <div id="shrekbilde">
+          <div><img src="shrek.png" alt=""> </div>
+        </div>
+
+        <div id="tekst">
+          <div id="tekst1">
+            <p>CSS keyfram animation tutorial part 1</p>
+          </div>
+        </div>
+
+        <div>
+
+            <div> <img id="fly" src="fly.png"></div>
+
+        </div>
+        <div id="liteFly">
+                <img src="fly.jpg" height="30"> (klikk for lyd av/på)
+        </div>
+
+        <div id="teletubbie">
+          <div><img src="teletubbie.png" alt=""> <div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+      <div id="btn">
+        <button type="button" id="btnLyd" name="button">الموت لاسرائيل</button>
+      </div>
+      <audio id="lyd" src="ringtone.mp3" loop autoplay controls></audio>
+      <audio id="flyLyd" src="Flylyd.mp3" loop></audio>
+      <video src="ringtone.mp4" autoplay controls loop>
+
+      </video>
+    <script type="text/javascript">
+      var btnLyd = document.getElementById("btnLyd");
+      var flyLyd = document.getElementById("flyLyd");
+      var liteFly = document.getElementById("liteFly");
+
+      musikk = true;
+      btnLyd.onclick = function(){
+          if(musikk){
+              lyd.volume = 0;//lyd av
+              musikk = false;
+          }
+          else{
+              lyd.volume = 1;//lyd på
+              musikk = true;
+          }
+      }
+
+
+
+      lydPaa = false;
+      flyLyd.play();
+
+      liteFly.onclick = function(){
+          if  (lydPaa){
+              flyLyd.pause();
+              lydPaa = false;
+          }
+          else{
+              flyLyd.play();
+              lydPaa = false;
+          }
+      }
+    </script>
+  </body>
+</html>
