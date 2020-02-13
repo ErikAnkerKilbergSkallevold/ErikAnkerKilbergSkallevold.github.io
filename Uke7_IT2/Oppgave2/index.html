@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prøve Uke 7</title>
+    <style>
+
+    skøyter{
+
+    }
+
+    @keyframes skøytekeys {
+      0%{left:10%;}
+      50%{left:50%;}
+      100%{left:90%;}
+    }
+
+    map{
+      cursor: grab;
+    }
+    .app{
+      position:relative;
+      overflow: hidden;
+      margin: auto;
+      text-align: center;
+
+    }
+    #overskrift{
+      text-align:center;
+    }
+    #tekst{
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      font-size: 20px;
+    }
+    #skihopp{
+      text-align: center;
+      margin-top: 75px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h1 id="overskrift">Skiøvelser</h1>
+
+      <img src="ovelser1.jpg" usemap="#muskler" alt="">
+    </div>
+    <map name="muskler">
+      <area id="skøyter" shape="rect" coords="175,0,325,215" href="#" alt="">
+      <area id="hopper" shape="rect" coords="225,200,500,375" href="hopper.html" alt="">
+    </map>
+    <audio id="lyd-armstrekkeren" src="skoytelyd.wav"></audio>
+    <br>
+    <section id="skøyter1">
+      <img src="skoyteloper1.jpg" alt="">
+    </section>
+
+
+
+    <script type="text/javascript">
+      const skøyter=document.querySelector("#skøyter");
+      const hopper=document.querySelector("#hopper");
+      const lydSkøyter=document.querySelector("#lyd-armstrekkeren");
+      const teskt=document.querySelector("#tekst");
+      var skøyter1 = document.getElementById("skøyter1");
+
+
+
+
+
+      skøyter.onclick=()=>{
+        skøyter1.animate([
+          {marginLeft:"50px"},
+          {marginLeft:"1000px"}
+        ],{
+          duration:2500,
+          direction:"alternate",
+          iterations:6
+        });
+        lydSkøyter.play();
+      }
+
+      hopper.onclick=()=>{
+
+      }
+
+    </script>
+  </body>
+</html>
