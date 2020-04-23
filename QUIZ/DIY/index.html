@@ -29,7 +29,7 @@
             b: "Helge (His og Geo)",
             c: "Åse (tysklærer)"
           },
-          correctAnswer: 'a'
+          fasit: 'a'
       },
         {
           spørsmål: "Hva heter den nordligste hovedstaden i Europa",
@@ -38,7 +38,7 @@
             b: "Helsinki",
             c: "Longyearbyen"
           },
-          correctAnswer: 'a'
+          fasit: 'a'
       },
         {
           spørsmål: "Hvem er den verste læreren?",
@@ -47,7 +47,7 @@
             b: "Andreas (KRLE)",
             c: "Aizan"
           },
-          correctAnswer: 'a'
+          fasit: 'a'
       },
         {
           spørsmål: "Hva er den verste sorteringsalgoritmen?",
@@ -56,7 +56,7 @@
             b: "Replace sort",
             c: "Bogo sort"
           },
-          correctAnswer: 'c'
+          fasit: 'c'
       },
         {
           spørsmål: "Hva er det første kodespråket?",
@@ -65,7 +65,7 @@
             b: "Plankalkül",
             c: "Cobol"
           },
-          correctAnswer: 'b'
+          fasit: 'b'
       },
         {
           spørsmål: "Hvem fant opp HTML?",
@@ -74,7 +74,7 @@
             b: "Bill Gates",
             c: "Tim Burners Lee"
           },
-          correctAnswer: 'c'
+          fasit: 'c'
       },
         {
           spørsmål: "Hva er den verste sorteringsalgoritmen?",
@@ -83,7 +83,7 @@
             b: "Replace sort",
             c: "Bogo sort"
           },
-          correctAnswer: 'c'
+          fasit: 'c'
       },
         {
           spørsmål: "Hva er lagreikonet i Word?",
@@ -92,7 +92,7 @@
             b: "Et lagreikon",
             c: "En harddisk"
           },
-          correctAnswer: 'a'
+          fasit: 'a'
       },
         {
           spørsmål: "Hvilket land har ikke RGB(255, 0, 0), RGB(0, 0, 255) og RGB(255, 255, 255) i flagget sitt?",
@@ -101,7 +101,7 @@
             b: "Myanmar(Burma)",
             c: "Jamaica"
           },
-          correctAnswer: 'c'
+          fasit: 'c'
       },
         {
           spørsmål: "Hva er hashing?",
@@ -110,7 +110,7 @@
             b: "Matteoperasjoner for å kryptere tekst",
             c: "Det Adobe brukte for å beskytte passordene sine"
           },
-          correctAnswer: 'b'
+          fasit: 'b'
       }]
 
 
@@ -167,7 +167,7 @@
         		brukerSvar = (svarContainers[i].querySelector('input[name=spørsmål'+i+']:checked')||{}).value;
 
         		// hvis svaret er riktig
-        		if(brukerSvar===spørsmåls[i].correctAnswer){
+        		if(brukerSvar===spørsmåls[i].fasit){
         			// legg til nummer til svaret
         			numCorrect++;
 
