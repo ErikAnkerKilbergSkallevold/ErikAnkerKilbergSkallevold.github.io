@@ -10,7 +10,7 @@ img{
   width:133px;
   height:133px;
 }
-griddiv{
+.griddiv{
   grid-row: span 1;
   grid-column: span 1;
 }

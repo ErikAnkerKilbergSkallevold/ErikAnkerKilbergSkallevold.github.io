@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+
+  <div id="quiz"></div>
+  <button id="submit">Sjekk svar</button>
+  <div id="results"></div>
+
+
+
+    <script type="text/javascript">
+
+    var quizContainer = document.getElementById('quiz');
+    var resultatContainer = document.getElementById('results');
+    var sendKnapp = document.getElementById('submit');
+
+      var mineSpørsmål  = [
+        {
+          spørsmål: "Hvem er den beste læreren på skolen?",
+          svar: {
+            a: "Aizan",
+            b: "Helge (His og Geo)",
+            c: "Åse (tysklærer)"
+          },
+          correctAnswer: 'a'
+      },
+        {
+          spørsmål: "Hva heter den nordligste hovedstaden i Europa",
+          svar: {
+            a: "Reykjavik",
+            b: "Helsinki",
+            c: "Longyearbyen"
+          },
+          correctAnswer: 'a'
+      },
+        {
+          spørsmål: "Hvem er den verste læreren?",
+          svar: {
+            a: "Åse (Tysklærer)",
+            b: "Andreas (KRLE)",
+            c: "Aizan"
+          },
+          correctAnswer: 'a'
+      },
+        {
+          spørsmål: "Hva er den verste sorteringsalgoritmen?",
+          svar: {
+            a: "Bubble sort",
+            b: "Replace sort",
+            c: "Bogo sort"
+          },
+          correctAnswer: 'c'
+      },
+        {
+          spørsmål: "Hva er det første kodespråket?",
+          svar: {
+            a: "C",
+            b: "Plankalkül",
+            c: "Cobol"
+          },
+          correctAnswer: 'b'
+      },
+        {
+          spørsmål: "Hvem fant opp HTML?",
+          svar: {
+            a: "Dave Ragget",
+            b: "Bill Gates",
+            c: "Tim Burners Lee"
+          },
+          correctAnswer: 'c'
+      },
+        {
+          spørsmål: "Hva er den verste sorteringsalgoritmen?",
+          svar: {
+            a: "Bubble sort",
+            b: "Replace sort",
+            c: "Bogo sort"
+          },
+          correctAnswer: 'c'
+      },
+        {
+          spørsmål: "Hva er lagreikonet i Word?",
+          svar: {
+            a: "Floppy Disk",
+            b: "Et lagreikon",
+            c: "En harddisk"
+          },
+          correctAnswer: 'a'
+      },
+        {
+          spørsmål: "Hvilket land har ikke RGB(255, 0, 0), RGB(0, 0, 255) og RGB(255, 255, 255) i flagget sitt?",
+          svar: {
+            a: "Uganda",
+            b: "Myanmar(Burma)",
+            c: "Jamaica"
+          },
+          correctAnswer: 'c'
+      },
+        {
+          spørsmål: "Hva er hashing?",
+          svar: {
+            a: "4/20",
+            b: "Matteoperasjoner for å kryptere tekst",
+            c: "Det Adobe brukte for å beskytte passordene sine"
+          },
+          correctAnswer: 'b'
+      }]
+
+
+
+      function genererQuiz(spørsmåls, quizContainer, resultatContainer, sendKnapp){
+
+      	function showspørsmåls(spørsmåls, quizContainer){
+          // vi må lagre spørsmål og svarene et sted
+        	var output = [];
+        	var svar;
+
+        	// for hvert spørsmål
+        	for(var i=0; i<spørsmåls.length; i++){
+
+        		// tømmer svarene
+        		svar = [];
+
+        		// for hvert svar til dette spørsmålet
+        		for(letter in spørsmåls[i].svar){
+
+        			// legger til en radio knapp
+        			svar.push(
+        				'<label>'
+        					+ '<input type="radio" name="spørsmål'+i+'" value="'+letter+'">'
+        					+ letter + ': '
+        					+ spørsmåls[i].svar[letter]
+        				+ '</label>'
+        			);
+        		}
+
+        		// legg til dette spørsmål og dets svar
+        		output.push(
+        			'<div class="spørsmål">' + spørsmåls[i].spørsmål + '</div>'
+        			+ '<div class="svar">' + svar.join('') + '</div>'
+        		);
+	       }
+
+	// kombiner output og putt det i en string til HTML
+	quizContainer.innerHTML = output.join('');
+      	}
+
+      	function visResultat(spørsmåls, quizContainer, resultatContainer){
+          // henter svarene fra Quizen
+        	var svarContainers = quizContainer.querySelectorAll('.svar');
+
+        	// holder styr på brukerens svar
+        	var brukerSvar = '';
+        	var numCorrect = 0;
+
+        	// for hvert spørsmål
+        	for(var i=0; i<spørsmåls.length; i++){
+
+        		// finn det valgte svaret
+        		brukerSvar = (svarContainers[i].querySelector('input[name=spørsmål'+i+']:checked')||{}).value;
+
+        		// hvis svaret er riktig
+        		if(brukerSvar===spørsmåls[i].correctAnswer){
+        			// legg til nummer til svaret
+        			numCorrect++;
+
+        			// gir svaret grønn farge
+        			svarContainers[i].style.color = 'lightgreen';
+        		}
+        		// hvis svaret er feil eller blank
+        		else{
+        			// gi svaret rød farge
+        			svarContainers[i].style.color = 'red';
+        		}
+	        }
+
+      	// viser totalen riktige svar
+      	resultatContainer.innerHTML = numCorrect + ' av ' + spørsmåls.length;
+      }
+
+      	// viser spørsmål
+      	showspørsmåls(spørsmåls, quizContainer);
+
+      	// viser resultat når du klikker sjekk
+      	sendKnapp.onclick = function(){
+      		visResultat(spørsmåls, quizContainer, resultatContainer);
+      	}
+      }
+      genererQuiz(mineSpørsmål, quizContainer, resultatContainer, sendKnapp);
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

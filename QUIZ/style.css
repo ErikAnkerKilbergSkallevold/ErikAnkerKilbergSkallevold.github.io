@@ -1,0 +1,22 @@
+body {
+  background-color: #e0e0e0;
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: 14px;
+  color: #323232;
+}
+.innpakning {
+  width: 60%;
+  margin: auto;
+  padding: 5px;
+  background-color: #fefefe;
+  border: 3px solid black;
+}
+.resultat {
+  margin: 20px 5px;
+  padding: 20px;
+  font-size: 3.5ex;
+}
+img {
+  width: 400px;
+
+}

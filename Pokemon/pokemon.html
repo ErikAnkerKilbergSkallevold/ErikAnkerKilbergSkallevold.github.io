@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Pokemon</title>
+        <style media="screen">
+        @font-face {
+          font-family: 'pokemon_solidnormal';
+          src: url('font_1/pokemon_solid-webfont.woff2') format('woff2'),
+               url('font_1/pokemon_solid-webfont.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          }
+          main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+          }
+          .griddiv{
+            grid-row: span 1;
+            grid-column: span 1;
+          }
+          .img{
+            width:133px;
+            height:133px;
+          }
+          .button1{
+            justify-content: center;
+            text-align: center;
+          }
+          .bildelogo{
+            justify-content: center;
+            text-align: center;
+          }
+          .border {
+            background-color: lightgrey;
+            border: 2px solid white;
+            font-size: 30px;
+            text-align: center;
+            border-radius: 1px
+          }
+          .button{
+            background-color: darkblue;
+            border: none;
+            color: rgb(255, 247, 0);
+            padding: 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 2px;
+            cursor: pointer;
+          }
+          p{
+            font-family: "pokemon_solidnormal", Arial, sans-serif;
+            font-weight: normal;
+            font-style: normal;
+          }
+
+        </style>
+
+    </head>
+    <body>
+
+
+      <div class="bildelogo">
+        <img src="bilder/Pokemon-Logo.jpg" alt="Pokemon">
+      </div>
+      <div class="button1">
+        <button class="button" type="button" onclick="sorterNavn()" name="button"><p>Sorter etter navn</p></button>
+        <button class="button" type="button" onclick="sorterType1()" name="button"><p>Sorter etter hovedtype</p></button>
+        <button class="button" type="button" onclick="sorterType2()" name="button"><p>Sorter etter sekundærtype</p></button>
+        <button class="button" type="button" onclick="sorterMaxCP()" name="button"><p>Sorter etter Max CP</p></button>
+        <button class="button" type="button" onclick="sorterMaxHP()" name="button"><p>Sorter etter Max HP</p></button>
+        <button class="button" type="button" onclick="revers()" name="button"><p>Endre rekkefølge</p></button>
+      </div>
+
+
+
+      <script type="text/javascript">
+      const main = document.querySelector("main");
+
+      const db = firebase.database();
+      const pokemon = db.ref("pokemon");
+
+      function visPoke(snapshot){
+        let Poke = snapshot.val();
+        main.innerHTML += `
+        <div class="griddiv">
+        <div class="border">
+        <h1>${Poke.Name}</h1>
+        <img src="${Poke.ImageURL}" class="img" alt="" />
+        <p><b>Primær type: </b>${Poke.Type1}</p>
+        <p><b>Sekundær type: </b>${Poke.Type2}</p>
+        <p><b>Max HP: </b>${Poke.MaxHP}</p>
+        `
+      }
+
+      pokemon.on("child_added",visPoke)
+      </script>
+
+
+
+        <main>
+
+        </main>
+
+        <!--  skal finne ut av det -->
+
+    <script src="index.js" charset="utf-8"></script>
+    </body>
+</html> <!--  Jeg har bare tilgang til HTML fila, ikke CSSen eller JS fila. KK.   -->
