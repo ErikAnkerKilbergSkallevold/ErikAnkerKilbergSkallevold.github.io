@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="RedditResponseBotAssets/assets/clippy/clippy.css" rel="stylesheet" type="text/css"  media="all">
+<link rel="shortcut icon" href="RedditResponseBotAssets/assets/icons/computer-3.png" type="image/png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="RedditResponseBotAssets/assets/win95.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<title>The worst text editor known to man</title>
+</head>	
+<body class="windows-scrollbar">
+	<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-95 ">
+            <img src="RedditResponseBotAssets/assets/icons/computer-3.png" alt="Bilde av en PC">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <p class="nav-link" >The worst text editor known to man<span class="sr-only">(current)</span></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	
+	
+	<!-- Header -->
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4" style="color: black">The worst text editor known to man</h1>
+        <p class="lead" style="color: black">Because we all love clippy (and his friends)</p>
+    </div>
+
+    <!-- Not header -->
+	
+	<!-- Terminal -->
+<div class="container">
+		<div class="card mb-4">
+			<div class="card-header">
+				<h4 class="my-0 font-weight-normal">Notepad--.exe</h4>
+		  </div>
+			<div class="card-body">
+			 <form>
+			  <div class="form-group row">
+				<label for="inputEmail3" class="col-sm-2 col-form-label"><img src="RedditResponseBotAssets/assets/icons/notepad-5.png" class="icon-16-4"> Filename:</label>
+				<div class="col-sm-10">
+				  <input type="name" id="inp1" class="form-95">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="exampleFormControlTextarea1">Text input:</label>
+				<textarea class="form-95" id="inp2" rows="3"></textarea>
+			  </div>
+			  <div class="form-group row">
+				<div class="col-sm-10">
+				  <input type="submit" class="btn btn-primary" onclick="downloadFile();" value="Save as...">
+				</div>
+			  </div>
+			</form>
+		  </div>
+		</div>
+	</div>
+
+	
+	
+	<div class="inputBox">
+		<div class="card mb-4">
+			<div class="card-header">
+				<h4 class="my-0 font-weight-normal">Text Input</h4>
+			</div>
+			<div class="card-body">
+				<ul class="list-unstyled mt-3 mb-4">
+					<div class="slidecontainer">
+						<p id="txtDemo"></p>
+					  	<label for="quantity">Enter ASCII (between 0 and 127):</label>
+  						<input type="number" id="quantity" name="quantity" class="numberSelect" min="0" max="127">
+					</div>
+				</ul>
+				<button type="button" class="btn btn-primary" onclick="keyHandler();" id="buttonInsert">Enter</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Cheat Sheet
+                </button>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<!-- WinAmp -->
+	<div id="app" class="winamp"></div>
+	
+	
+<!-- Bootstrap cards -->
+
+		<div class="container" id="page-content">
+			<div class="card-deck mb-3 text-center">
+				<div class="card mb-4">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Clippy</h4>
+					</div>
+					<div class="card-body">
+						<ul class="list-unstyled mt-3 mb-4">
+							<div class="slidecontainer">
+								<label>Amount</label><input type="range" min="1" max="10" value="100" class="slider" id="myRange1">
+								<p id="demo1"></p>
+							</div>
+						</ul>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonSubmit1">Add</button>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonReset1">Reset</button>
+					</div>
+				</div>
+				<div class="card mb-4">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Merlin</h4>
+					</div>
+					<div class="card-body">
+						<ul class="list-unstyled mt-3 mb-4">
+							<div class="slidecontainer">
+								<label>Amount</label><input type="range" min="1" max="10" value="100" class="slider" id="myRange2">
+								<p id="demo2"></p>
+							</div>
+						</ul>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonSubmit2">Add</button>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonReset2">Reset</button>
+					</div>
+				</div>
+				<div class="card mb-4">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Rover</h4>
+					</div>
+					<div class="card-body">
+						<ul class="list-unstyled mt-3 mb-4">
+							<div class="slidecontainer">
+								<label>Amount</label><input type="range" min="1" max="10" value="100" class="slider" id="myRange3">
+								<p id="demo3"></p>
+							</div>
+						</ul>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonSubmit3">Add</button>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonReset3">Reset</button>
+					</div>
+				</div>
+				<div class="card mb-4">
+					<div class="card-header">
+						<h4 class="my-0 font-weight-normal">Links</h4>
+					</div>
+					<div class="card-body">
+						<ul class="list-unstyled mt-3 mb-4">
+							<div class="slidecontainer">
+								<label>Amount</label><input type="range" min="1" max="10" value="100" class="slider" id="myRange4">
+								<p id="demo4"></p>
+							</div>
+						</ul>
+						<button type="button" class="btn btn-lg btn-block btn-primary" id="buttonSubmit4">Add</button>
+					  <button type="button" class="btn btn-lg btn-block btn-primary" id="buttonReset4">Reset</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">ASCII Table</h5>
+					<button type="button" class="btn" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img src="RedditResponseBotAssets/assets/738px-ASCII-Table.svg.png" class="img-fluid">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+
+		
+	
+<!-- Footer -->
+    <footer class="taskbar">
+        <div class="row" style="margin-right: 0px;">
+            <div class="col-8">
+				<a href="../portfolioPage/index.html" class="btn start-button"><img src="RedditResponseBotAssets/assets/icons/windows-0.png" class="icon-16">Home</a>
+                <a href="https://github.com/ErikAnkerKilbergSkallevold" class="btn start-button"><img src="RedditResponseBotAssets/assets/icons/users-1.png" class="icon-16">Author</a>
+                <a href="https://github.com/ErikAnkerKilbergSkallevold/myWorstTextEditor" class="btn start-button"><img src="RedditResponseBotAssets/assets/icons/directory_folder_options-5.png" class="icon-16">GitHub</a>
+				<a href="https://github.com/AlexBSoft/win95.css" class="btn start-button"><img src="RedditResponseBotAssets/assets/icons/directory_folder_options-5.png" class="icon-16">Win95.css</a>
+				<a href="https://www.smore.com/clippy-js" class="btn start-button"><img src="RedditResponseBotAssets/assets/icons/directory_folder_options-5.png" class="icon-16">Clippy.js</a>
+            </div>
+            <div class="col-4 time">Editor by EAKS, style by AlexB</div>
+        </div>
+
+    </footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Add these scripts to  the bottom of the page -->
+<!-- jQuery 1.7+ -->
+<script src="RedditResponseBotAssets/assets/clippy/clippy.min.js"></script>
+
+<!-- Clippy.js -->
+<script src="RedditResponseBotAssets/assets/clippy/clippy.min.js"></script>
+	
+	
+<!-- WinAMP -->	
+<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
+    <script>
+		const app = document.getElementById("app");
+        const Webamp = window.Webamp;
+        new Webamp({
+            initialTracks: [{
+                metaData: {
+                    artist: "ScaryPS",
+                    title: "Windows 95 Remix"
+                },
+                url: "music/Windows 95 Remix (128kbit_AAC).m4a",
+                duration: 83
+            },
+			{
+                metaData: {
+                    artist: "madxruler",
+                    title: "Windows 95 Remix 2016"
+                },
+                url: "music/Windows 95 Remix 2016 (128kbit_AAC).m4a",
+                duration: 117
+            },
+			{
+                metaData: {
+                    artist: "Sugar95",
+                    title: "Sugar 95 - Windows 95 Remix"
+                },
+                url: "music/Sugar95 - Windows 95 Remix (128kbit_AAC).m4a",
+                duration: 88
+            }],
+        }).renderWhenReady(document.getElementById('app'));
+    </script>  
+	
+	
+	
+
+<!-- Spam Script & Text -->
+<script>	
+	var s = [];
+	for( var i = 0; i <= 127; i++ )
+	{
+		s.push(String.fromCharCode( i ));
+	}
+	
+	function keyHandler(){
+		var number = document.getElementById("quantity").value;
+		convertToASCII(number);
+		keySpawn();
+	}
+	
+	function convertToASCII(num){
+		var txt = s[num];
+		document.getElementById("inp2").innerHTML += txt;			
+	}
+	
+	function keySpawn(){
+		let functions = [
+		  spawnClippy(Math.floor(Math.random() < 0.25)),
+		  spawnMerlin(Math.floor(Math.random() < 0.25)),
+		  spawnRover(Math.floor(Math.random() < 0.25)),
+		  spawnLinks(Math.floor(Math.random() < 0.25))
+		];
+		
+		functions[Math.floor(Math.random() * functions.length)]();		
+	}
+ 	$(".form-95").keydown(function(event) { 
+    	return false;
+ 	});
+	$(".numberSelect").keydown(function(event) { 
+    	return false;
+ 	});
+</script>
+	
+ <script>
+	let downloadFile = () => {
+    	
+        // Get the data from each element on the form.
+    	const name = document.getElementById('inp1');
+        const msg = document.getElementById('inp2');
+        
+        // This variable stores all the data.
+        let data = msg.value;
+        
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: 'text/plain' });
+        var sFileName = document.getElementById('inp1').value + ".txt";   // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+
+        if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click();
+		setInterval(goBack, 1000);
+    }
+	
+	function goBack(){
+		history.back();
+	}
+</script>
+
+<!-- Clippy Script -->
+<script type="text/javascript">
+	var slider1 = document.getElementById("myRange1");
+	var slider2 = document.getElementById("myRange2");
+	var slider3 = document.getElementById("myRange3");
+	var slider4 = document.getElementById("myRange4");
+	var output1 = document.getElementById("demo1");
+	var output2 = document.getElementById("demo2");
+	var output3 = document.getElementById("demo3");
+	var output4 = document.getElementById("demo4");
+	
+	document.getElementById("buttonSubmit1").onclick = function() {addClippy()};
+	document.getElementById("buttonSubmit2").onclick = function() {addMerlin()};
+	document.getElementById("buttonSubmit3").onclick = function() {addRover()};
+	document.getElementById("buttonSubmit4").onclick = function() {addLinks()};
+	
+	document.getElementById("buttonReset1").onclick = function() {resetClippy()};
+	document.getElementById("buttonReset2").onclick = function() {resetClippy()};
+	document.getElementById("buttonReset3").onclick = function() {resetClippy()};
+	document.getElementById("buttonReset4").onclick = function() {resetClippy()};
+	
+	output1.innerHTML = slider1.value; // Display the default slider value
+	output2.innerHTML = slider2.value; // Display the default slider value
+	output3.innerHTML = slider3.value; // Display the default slider value
+	output4.innerHTML = slider4.value; // Display the default slider value
+	// Update the current slider value (each time you drag the slider handle)
+	slider1.oninput = function() {
+	  output1.innerHTML = this.value;
+	}
+	slider2.oninput = function() {
+	  output2.innerHTML = this.value;
+	}
+	slider3.oninput = function() {
+	  output3.innerHTML = this.value;
+	}
+	slider4.oninput = function() {
+	  output4.innerHTML = this.value;
+	}
+	
+	
+	function addClippy(){
+		spawnClippy(slider1.value)
+	}
+	
+	function addMerlin(){
+		spawnMerlin(slider2.value)
+	}
+	
+	function addRover(){
+		spawnRover(slider3.value)
+	}
+	
+	function addLinks(){
+		spawnLinks(slider4.value)
+	}
+	
+	function spawnClippy(clippyToSpawn){
+		for (let i = 0; i < clippyToSpawn; i++) {
+		  clippy.load('Clippy', function(agent) {
+				// Do anything with the loaded agent
+				agent.show();
+
+				setInterval(displayClip, 1000);
+
+				function displayClip(){
+					agent.animate();
+					agent.moveTo(Math.floor(Math.random() * getViewportW()), Math.floor(Math.random() * getViewportH()))
+					agent.gestureAt(Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000))
+				}
+
+			});
+		} 	
+	}
+	
+	function spawnMerlin(clippyToSpawn){
+		for (let i = 0; i < clippyToSpawn; i++) {
+		  clippy.load('Merlin', function(agent) {
+				// Do anything with the loaded agent
+				agent.show();
+
+				setInterval(displayClip, 1000);
+
+				function displayClip(){
+					agent.animate();
+					agent.moveTo(Math.floor(Math.random() * getViewportW()), Math.floor(Math.random() * getViewportH()))
+					agent.gestureAt(Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000))
+				}
+
+			});
+		} 	
+	}
+	
+	function spawnRover(clippyToSpawn){
+		for (let i = 0; i < clippyToSpawn; i++) {
+		  clippy.load('Rover', function(agent) {
+				// Do anything with the loaded agent
+				agent.show();
+
+				setInterval(displayClip, 1000);
+
+				function displayClip(){
+					agent.animate();
+					agent.moveTo(Math.floor(Math.random() * getViewportW()), Math.floor(Math.random() * getViewportH()))
+					agent.gestureAt(Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000))
+				}
+
+			});
+		} 	
+	}
+	
+	function spawnLinks(clippyToSpawn){
+		for (let i = 0; i < clippyToSpawn; i++) {
+		  clippy.load('Links', function(agent) {
+				// Do anything with the loaded agent
+				agent.show();
+
+				setInterval(displayClip, 1000);
+
+				function displayClip(){
+					agent.animate();
+					agent.moveTo(Math.floor(Math.random() * getViewportW()), Math.floor(Math.random() * getViewportH()))
+					agent.gestureAt(Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000))
+				}
+
+			});
+		} 	
+	}
+	
+	function resetClippy(){
+		alert("i'm sorry dave i'm afraid i can't do that");
+	}
+	
+	
+	
+	function getViewportH() {
+		var viewPortWidth;
+		var viewPortHeight;
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+		 }
+
+		// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+			viewPortWidth = document.documentElement.clientWidth,
+			viewPortHeight = document.documentElement.clientHeight
+		 }
+
+		 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+		 return viewPortHeight;
+	}
+	
+	function getViewportW() {
+		var viewPortWidth;
+		var viewPortHeight;
+		 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+		 if (typeof window.innerWidth != 'undefined') {
+		   viewPortWidth = window.innerWidth,
+		   viewPortHeight = window.innerHeight
+		 }
+
+		// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+		 else if (typeof document.documentElement != 'undefined'
+		 && typeof document.documentElement.clientWidth !=
+		 'undefined' && document.documentElement.clientWidth != 0) {
+			viewPortWidth = document.documentElement.clientWidth,
+			viewPortHeight = document.documentElement.clientHeight
+		 }
+
+		 // older versions of IE
+		 else {
+		   viewPortWidth = document.getElementsByTagName('body')[0].clientWidth,
+		   viewPortHeight = document.getElementsByTagName('body')[0].clientHeight
+		 }
+		 return viewPortWidth;
+	}
+
+	
+</script>
+	
+	
+
+</html>
+
