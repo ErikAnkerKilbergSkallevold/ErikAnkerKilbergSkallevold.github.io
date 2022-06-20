@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="RedditResponseBotAssets/assets/clippy/clippy.css" rel="stylesheet" type="text/css"  media="all">
 <link rel="shortcut icon" href="RedditResponseBotAssets/assets/icons/computer-3.png" type="image/png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="RedditResponseBotAssets/assets/win95.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link href="RedditResponseBotAssets/assets/clippy/clippy.css" rel="stylesheet" type="text/css"  media="all">
 <title>The worst text editor known to man</title>
 </head>	
 <body class="windows-scrollbar">
@@ -206,7 +206,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- Add these scripts to  the bottom of the page -->
 <!-- jQuery 1.7+ -->
-<script src="RedditResponseBotAssets/assets/clippy/clippy.min.js"></script>
+<script src="RedditResponseBotAssets/assets/clippy/jquery-1.7.min.js"></script>
 
 <!-- Clippy.js -->
 <script src="RedditResponseBotAssets/assets/clippy/clippy.min.js"></script>
@@ -277,12 +277,13 @@
 		
 		functions[Math.floor(Math.random() * functions.length)]();		
 	}
- 	$(".form-95").keydown(function(event) { 
+	$(".form-95").keydown(function(event) { 
     	return false;
  	});
 	$(".numberSelect").keydown(function(event) { 
     	return false;
  	});
+
 </script>
 	
  <script>
@@ -386,7 +387,7 @@
 
 				function displayClip(){
 					agent.animate();
-					agent.moveTo(Math.floor(Math.random() * getViewportW()), Math.floor(Math.random() * getViewportH()))
+					agent.moveTo(1000, 1000)
 					agent.gestureAt(Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000))
 				}
 
